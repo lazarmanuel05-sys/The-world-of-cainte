@@ -1,0 +1,2674 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The World of CAINTÈ — Independent Concept</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#0a0a09;--bone:#f2efe9;--stone:#d6d1c9;--paper:#e8e3da;--white:#fff;--ease:cubic-bezier(.2,.72,.2,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--bone);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}body.lock{overflow:hidden}a{color:inherit;text-decoration:none}
+.grain{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");mix-blend-mode:soft-light}
+.intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:#050505;transition:opacity 1s var(--ease),visibility 1s}.intro.done{opacity:0;visibility:hidden}.intro-logo{letter-spacing:.34em;font-size:clamp(22px,2.3vw,34px);font-weight:500;opacity:0;transform:translateY(8px);animation:intro 1.55s var(--ease) .15s forwards}@keyframes intro{0%{opacity:0;transform:translateY(10px)}42%{opacity:1;transform:translateY(0)}72%{opacity:1}100%{opacity:0;transform:translateY(-6px)}}
+.topbar{position:fixed;z-index:90;top:0;left:0;right:0;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 34px;color:var(--bone);mix-blend-mode:difference}.brand{font-size:14px;letter-spacing:.25em;font-weight:600}.nav{display:flex;gap:26px;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.nav a{opacity:.58;transition:.25s}.nav a:hover,.nav .active{opacity:1}.world-index{font-size:9px;letter-spacing:.15em;text-transform:uppercase;opacity:.72;min-width:130px;text-align:right}
+.hero{position:relative;min-height:100svh;overflow:hidden;display:flex;align-items:flex-end;isolation:isolate}.hero-media{position:absolute;inset:-4%;z-index:-2;background:linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.14) 52%,rgba(0,0,0,.74) 100%),url("https://cainte.com/cdn/shop/files/v111-14.jpg?v=1687427909") center 38%/cover no-repeat;transform:scale(1.07);animation:drift 16s ease-out forwards}@keyframes drift{to{transform:scale(1.01)}}.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.30),transparent 58%)}
+.hero-content{width:100%;padding:0 6vw 7vh;display:grid;grid-template-columns:1.3fr .7fr;align-items:end;gap:40px}.eyebrow,.label{font-size:9px;text-transform:uppercase;letter-spacing:.22em;opacity:.72}.eyebrow{margin-bottom:22px}.display{font-size:clamp(58px,9vw,150px);line-height:.83;letter-spacing:-.055em;font-weight:400;margin:0;text-transform:uppercase}.display span{display:block}.hero-side{justify-self:end;max-width:350px;padding-bottom:8px}.serif{font-family:"DM Serif Display",Georgia,serif;font-style:italic;font-weight:400}.hero-tagline{margin:0 0 34px;font-size:clamp(28px,3vw,46px);line-height:1.02}.cta{display:inline-flex;align-items:center;gap:12px;font-size:9px;letter-spacing:.19em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:8px}
+.bridge{background:var(--bone);color:var(--ink);min-height:380vh;position:relative}.bridge-sticky{position:sticky;top:0;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden}.bridge-lines{width:min(1200px,90vw);min-height:72vh;display:flex;flex-direction:column;justify-content:center;position:relative}.bridge-word{font-size:clamp(58px,8.5vw,132px);text-transform:uppercase;letter-spacing:-.055em;line-height:.88;opacity:.11;transform:translateY(28px);transition:.7s var(--ease);font-weight:400;margin:4px 0}.bridge-word.active{opacity:1;transform:none}.bridge-word.dim{opacity:.21}.bridge-sub{position:absolute;right:0;bottom:7vh;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.52}
+.portal{position:relative;min-height:108svh;overflow:hidden;display:flex;align-items:flex-end}.portal-media{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.74)),url("https://cainte.com/cdn/shop/files/IMG_9431.jpg?v=1721833787&width=1800") center/cover no-repeat;transform:scale(1.035);transition:1.6s var(--ease)}.portal.in-view .portal-media{transform:scale(1)}.portal-content{position:relative;z-index:2;padding:0 6vw 8vh;width:100%;display:grid;grid-template-columns:1fr .7fr;align-items:end;gap:40px}.portal-title{font-size:clamp(65px,10vw,152px);line-height:.82;letter-spacing:-.06em;text-transform:uppercase;font-weight:400;margin:0}.portal-side{justify-self:end;max-width:410px}.portal-side p{font-size:clamp(28px,3vw,45px);line-height:1.03;margin:0 0 32px}
+.chapter{background:var(--bone);color:var(--ink)}
+.scene{position:relative;min-height:100svh;overflow:hidden}.scene-pad{padding:14vh 6vw}.scene-head{font-size:clamp(56px,8vw,128px);line-height:.86;letter-spacing:-.055em;text-transform:uppercase;font-weight:400;margin:0}.scene-copy{font-size:clamp(21px,2.3vw,38px);line-height:1.12;max-width:820px;margin:34px 0 0}.tiny{font-size:9px;line-height:1.55;letter-spacing:.14em;text-transform:uppercase;opacity:.58}.muted{opacity:.58}
+.cph{display:grid;grid-template-columns:1.15fr .85fr;min-height:105svh;background:var(--bone)}.cph-left{padding:15vh 6vw;display:flex;flex-direction:column;justify-content:space-between}.cph-year{font-size:clamp(92px,15vw,245px);line-height:.72;letter-spacing:-.075em;font-weight:300;margin-left:-.06em}.cph-right{position:relative;background:#171715;overflow:hidden}.architecture{position:absolute;inset:0;background:linear-gradient(120deg,transparent 0 24%,rgba(255,255,255,.055) 24% 25%,transparent 25% 49%,rgba(255,255,255,.08) 49% 50%,transparent 50%),linear-gradient(18deg,#0f0f0e 0 35%,#292825 35% 56%,#131312 56%)}.architecture:before{content:"";position:absolute;left:17%;top:13%;width:58%;height:72%;border:1px solid rgba(255,255,255,.28);transform:skewY(-8deg)}.architecture:after{content:"COPENHAGEN";position:absolute;right:4vw;bottom:5vh;color:rgba(255,255,255,.67);font-size:10px;letter-spacing:.22em;writing-mode:vertical-rl}.cph-caption{position:absolute;left:4vw;bottom:5vh;color:var(--bone);max-width:310px;font-size:11px;line-height:1.5;letter-spacing:.04em}
+.origin{background:#090909;color:var(--bone);min-height:160svh}.origin-sticky{position:sticky;top:0;min-height:100svh;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:6vw;padding:12vh 6vw}.origin-text h2{font-size:clamp(58px,8vw,128px);line-height:.86;letter-spacing:-.06em;text-transform:uppercase;font-weight:400;margin:0 0 42px}.origin-text p{max-width:590px;font-size:clamp(18px,1.8vw,28px);line-height:1.35;color:rgba(242,239,233,.78)}.thoughts{display:grid;gap:14px;margin-top:40px}.thought{border-top:1px solid rgba(255,255,255,.2);padding:15px 0;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.72)}.origin-object{position:relative;aspect-ratio:4/5;background:#171715;overflow:hidden}.origin-object img{width:100%;height:100%;object-fit:cover;filter:saturate(.7) contrast(1.07);opacity:.87}.origin-object:after{content:"PUBLIC ORIGIN STORY / MATHIAS";position:absolute;left:24px;bottom:22px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.statement{min-height:110svh;background:var(--bone);display:flex;align-items:center;justify-content:center;text-align:center;padding:14vh 6vw}.statement h2{margin:0;font-size:clamp(64px,10vw,160px);line-height:.83;letter-spacing:-.065em;text-transform:uppercase;font-weight:400}.statement h2 .serif{display:block;text-transform:none;font-size:.48em;letter-spacing:-.03em;margin-top:28px}
+.expression{background:#bfb7aa;min-height:120svh;color:#0a0a09;display:grid;grid-template-columns:1fr 1fr}.expression-media{background:linear-gradient(180deg,transparent,rgba(0,0,0,.25)),url("https://cainte.com/cdn/shop/files/newsletter_drop_003-13.jpg?v=1742746167&width=1600") center/cover no-repeat;min-height:120svh}.expression-copy{padding:14vh 6vw;display:flex;flex-direction:column;justify-content:center}.expression-copy .scene-head{font-size:clamp(54px,7vw,112px)}.expression-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px}.tag{border:1px solid rgba(10,10,9,.35);padding:10px 13px;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.danish{background:#ece7df;color:var(--ink);min-height:150svh}.danish-top{min-height:95svh;padding:13vh 6vw;display:grid;grid-template-columns:1fr .85fr;gap:8vw;align-items:center}.danish-big{font-size:clamp(74px,11vw,175px);line-height:.78;letter-spacing:-.07em;text-transform:uppercase;font-weight:400}.danish-q{font-size:clamp(28px,3.3vw,50px);line-height:1.04}.principles{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(10,10,9,.18);border-bottom:1px solid rgba(10,10,9,.18)}.principle{min-height:42vh;padding:36px;border-right:1px solid rgba(10,10,9,.18);display:flex;flex-direction:column;justify-content:space-between}.principle:last-child{border-right:0}.principle-num{font-size:9px;letter-spacing:.16em}.principle-word{font-size:clamp(25px,3vw,48px);text-transform:uppercase;letter-spacing:-.035em}.validation{padding:28px 6vw 8vh;font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.55}
+.language{background:#060606;color:var(--bone);min-height:160svh;padding:14vh 0}.language-intro{padding:0 6vw 10vh}.macro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2px;background:#141413}.macro{position:relative;min-height:78vh;overflow:hidden;background:#111}.macro img{width:100%;height:100%;object-fit:cover;filter:saturate(.75);transition:1.2s var(--ease)}.macro:hover img{transform:scale(1.03)}.macro:nth-child(2) img{object-position:center}.macro-label{position:absolute;left:28px;bottom:25px;font-size:10px;letter-spacing:.18em;text-transform:uppercase}.macro-label strong{display:block;font-size:clamp(32px,4vw,62px);letter-spacing:-.04em;font-weight:400;margin-bottom:8px}
+.process{background:var(--bone);color:var(--ink);padding:14vh 6vw}.process-top{display:grid;grid-template-columns:1fr .8fr;gap:8vw;margin-bottom:11vh}.process-note{align-self:end;font-size:13px;line-height:1.6;max-width:440px}.process-steps{border-top:1px solid rgba(10,10,9,.22)}.process-step{display:grid;grid-template-columns:90px .8fr 1fr;align-items:center;gap:20px;padding:28px 0;border-bottom:1px solid rgba(10,10,9,.18)}.process-step .n{font-size:9px;letter-spacing:.16em}.process-step .name{font-size:clamp(28px,3vw,48px);text-transform:uppercase;letter-spacing:-.04em}.process-step .desc{font-size:12px;line-height:1.55;opacity:.58;max-width:520px}.input-pill{display:inline-block;margin-top:32px;border:1px solid rgba(10,10,9,.3);padding:11px 14px;font-size:8px;letter-spacing:.16em;text-transform:uppercase}
+.people{background:#11110f;color:var(--bone);min-height:120svh;display:grid;grid-template-columns:.9fr 1.1fr}.people-copy{padding:14vh 6vw;display:flex;flex-direction:column;justify-content:center}.portrait{position:relative;min-height:120svh;background:radial-gradient(circle at 55% 35%,#3b3832 0 12%,transparent 13%),linear-gradient(145deg,#211f1b,#080808 68%);overflow:hidden}.portrait:before{content:"M";position:absolute;inset:0;display:grid;place-items:center;font-family:"DM Serif Display",Georgia,serif;font-size:min(58vw,780px);font-style:italic;color:rgba(242,239,233,.08);transform:translateY(-3%)}.portrait-meta{position:absolute;left:4vw;bottom:5vh}.portrait-meta strong{font-size:clamp(34px,4vw,62px);font-weight:400;letter-spacing:-.04em}.portrait-meta div{font-size:9px;letter-spacing:.17em;text-transform:uppercase;opacity:.62;margin-top:10px}.people-quote{font-size:clamp(22px,2.5vw,40px);line-height:1.12;margin:42px 0 0;max-width:590px}.people-note{margin-top:38px;max-width:500px;font-size:11px;line-height:1.6;opacity:.55}
+.collection{position:relative;min-height:125svh;color:var(--bone);display:flex;align-items:flex-end;overflow:hidden}.collection-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.72)),url("https://cainte.com/cdn/shop/files/IMG_9431.jpg?v=1721833787&width=1800") center/cover no-repeat;transform:scale(1.04)}.collection-content{position:relative;z-index:2;padding:0 6vw 8vh;width:100%;display:grid;grid-template-columns:1fr .8fr;gap:8vw;align-items:end}.collection-copy{max-width:590px}.collection-copy p{font-size:18px;line-height:1.45;color:rgba(242,239,233,.78)}.collection-side{justify-self:end;text-align:right}.collection-side .big{font-size:clamp(76px,10vw,150px);line-height:.8;letter-spacing:-.07em;font-weight:300}.collection-side .sub{font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-top:22px}
+.to-standard{min-height:125svh;background:#050505;color:var(--bone);display:flex;align-items:center;justify-content:center;text-align:center;padding:14vh 6vw;position:relative;overflow:hidden}.to-standard:before{content:"";position:absolute;width:min(680px,70vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(218,214,205,.2),rgba(255,255,255,.035) 33%,transparent 67%);filter:blur(3px)}.to-standard-inner{position:relative;z-index:1}.to-standard h2{font-size:clamp(64px,10vw,155px);line-height:.84;letter-spacing:-.06em;text-transform:uppercase;font-weight:400;margin:0 0 40px}.to-standard p{font-size:clamp(24px,3vw,43px);margin:0 0 45px;opacity:.78}
+.trailer{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}.trailer-bg{position:absolute;inset:0;background-size:cover;background-position:center}.trailer:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 10%,rgba(0,0,0,.76) 100%)}.trailer-content{position:relative;z-index:2;padding:0 6vw 8vh}.trailer h2{font-size:clamp(60px,8vw,130px);line-height:.85;letter-spacing:-.055em;text-transform:uppercase;font-weight:400;margin:0}.trailer p{font-size:clamp(25px,3vw,43px);margin:24px 0 0}.standard-trailer .trailer-bg{background-image:url("https://cainte.com/cdn/shop/files/original-necklace-694966_720x.jpg?v=1731514091");filter:saturate(.7) contrast(1.1)}.edit-trailer .trailer-bg{background-image:url("https://cainte.com/cdn/shop/files/newsletter_drop_003-13.jpg?v=1742746167&width=1600")}.your-trailer{background:var(--bone);color:var(--ink);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:12vh 6vw}.your-trailer .trailer-content{padding:0}.your-card{justify-self:center;width:min(520px,80vw);aspect-ratio:4/5;background:#e5dfd6;position:relative;overflow:hidden}.your-card img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}.your-meta{position:absolute;left:24px;right:24px;bottom:22px;display:flex;justify-content:space-between;gap:15px;font-size:9px;letter-spacing:.13em;text-transform:uppercase}.manifesto{min-height:110svh;background:var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;padding:14vh 6vw}.manifesto h2{font-size:clamp(62px,10vw,154px);line-height:.83;letter-spacing:-.065em;text-transform:uppercase;font-weight:400;margin:0}.manifesto p{font-size:clamp(26px,3vw,42px);opacity:.72;margin-top:38px}.footer{min-height:58svh;background:#050505;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12vh 6vw}.footer-logo{letter-spacing:.34em;font-size:clamp(24px,3vw,42px);font-weight:600;margin-bottom:34px}.footer-line{font-size:clamp(28px,4vw,56px);line-height:1.02;text-transform:uppercase;letter-spacing:-.035em}.footer-note{margin-top:66px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;opacity:.32}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease)}.in-view .reveal,.reveal.in-view{opacity:1;transform:none}
+@media(max-width:820px){.topbar{height:62px;padding:0 18px}.nav{display:none}.world-index{min-width:auto}.hero-content{grid-template-columns:1fr;padding:0 20px 6vh;gap:26px}.hero-media{background-position:62% center}.display{font-size:clamp(54px,17vw,96px)}.hero-side{justify-self:start}.hero-tagline{font-size:30px}.bridge{min-height:330vh}.bridge-lines{width:calc(100vw - 40px);min-height:68vh}.bridge-word{font-size:clamp(50px,15vw,86px)}.bridge-sub{left:0;right:auto;bottom:5vh}.portal-content{grid-template-columns:1fr;padding:0 20px 7vh}.portal-title{font-size:clamp(58px,18vw,98px)}.portal-side{justify-self:start}.cph,.expression,.danish-top,.origin-sticky,.people,.collection-content,.process-top,.your-trailer{grid-template-columns:1fr}.cph-right{min-height:55svh}.cph-left{min-height:70svh;padding:12vh 20px}.origin{min-height:auto}.origin-sticky{position:relative;min-height:auto;padding:12vh 20px}.origin-object{margin-top:30px}.statement{padding:12vh 20px}.expression-media{min-height:80svh}.expression-copy{padding:10vh 20px}.danish-top{padding:12vh 20px;min-height:auto}.principles{grid-template-columns:1fr 1fr}.principle{min-height:30vh}.macro-grid{grid-template-columns:1fr}.macro{min-height:65svh}.language-intro,.process,.people-copy{padding-left:20px;padding-right:20px}.process-step{grid-template-columns:50px 1fr}.process-step .desc{grid-column:2}.portrait{min-height:80svh}.collection{min-height:110svh}.collection-content{padding:0 20px 7vh}.collection-side{justify-self:start;text-align:left}.to-standard{padding:12vh 20px}.trailer-content{padding:0 20px 7vh}.your-trailer{padding:11vh 20px;gap:46px}.your-card{width:100%}.manifesto{padding:12vh 20px}.footer{padding-left:20px;padding-right:20px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.intro{display:none}.lock{overflow:auto}.hero-media,.portal-media,.reveal,.bridge-word{animation:none!important;transition:none!important}}
+
+/* v0.3 interaction + language refinements */
+.top-actions{display:flex;align-items:center;gap:20px}
+.lang-switch{display:flex;align-items:center;gap:6px;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.lang-btn{appearance:none;border:0;background:transparent;color:inherit;padding:4px 2px;opacity:.45;cursor:pointer;font:inherit;letter-spacing:.16em}
+.lang-btn.active{opacity:1}.lang-sep{opacity:.25}
+.cta{position:relative;z-index:5;cursor:pointer;pointer-events:auto;transition:opacity .25s ease}
+.cta:hover{opacity:.62}
+.macro{cursor:default}.macro img{pointer-events:none}.macro:hover img{transform:scale(1.025)}
+.portrait-typographic{background:linear-gradient(145deg,#211f1b,#080808 68%)}
+.portrait-typographic:before{content:"MATHIAS";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Inter",sans-serif;font-size:clamp(70px,12vw,190px);font-style:normal;font-weight:300;letter-spacing:-.065em;color:rgba(242,239,233,.075);transform:rotate(-90deg) scale(1.18)}
+.portrait-note{display:block;margin-top:22px;font-size:8px;letter-spacing:.14em;text-transform:uppercase;opacity:.4;max-width:260px;line-height:1.45}
+@media(max-width:820px){.top-actions{gap:10px}.world-index{display:none}.lang-switch{font-size:8px}}
+
+/* v0.4 — brand voice, verified origin, richer design/process, team placeholders */
+.brand-photo-placeholder{width:100%;height:100%;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px;border:1px solid rgba(255,255,255,.22);background:linear-gradient(135deg,rgba(255,255,255,.025),rgba(255,255,255,.075));color:rgba(242,239,233,.78)}
+.placeholder-label{font-size:clamp(20px,2.4vw,36px);letter-spacing:-.03em;text-transform:uppercase;margin-bottom:12px}
+.placeholder-note{font-size:9px;letter-spacing:.17em;text-transform:uppercase;opacity:.55}
+.cph-right{padding:5vw;display:flex;align-items:center;justify-content:center;background:#171715}.cph-right .brand-photo-placeholder{min-height:64vh}
+.origin-object{display:flex;align-items:center;justify-content:center;padding:3vw}.origin-object:after{display:none}.mathias-photo-placeholder{min-height:68vh}
+.design-process{background:#060606;color:var(--bone);padding:14vh 0 0;min-height:150svh}
+.design-process-intro{padding:0 6vw 9vh;display:grid;grid-template-columns:1fr .85fr;gap:7vw;align-items:end}
+.design-process-lead{font-size:clamp(24px,2.8vw,44px);line-height:1.05;color:rgba(242,239,233,.72);margin:0}
+.design-process-visuals{display:grid;grid-template-columns:1.08fr .92fr;gap:2px;background:#171715}
+.design-process-visuals .macro{min-height:78vh}
+.process-band{background:var(--bone);color:var(--ink);padding:9vh 6vw 11vh}
+.process-band-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;align-items:start;margin-bottom:7vh}
+.process-band-head p{font-family:"DM Serif Display",Georgia,serif;font-style:italic;font-size:clamp(24px,2.8vw,42px);line-height:1.08;margin:0}
+.process-flow{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid rgba(10,10,9,.22);border-bottom:1px solid rgba(10,10,9,.22)}
+.flow-step{min-height:210px;padding:24px 18px;border-right:1px solid rgba(10,10,9,.18);display:flex;flex-direction:column;justify-content:space-between}.flow-step:last-child{border-right:0}
+.flow-step span{font-size:9px;letter-spacing:.15em;opacity:.55}.flow-step strong{font-size:clamp(19px,2vw,30px);font-weight:400;text-transform:uppercase}.flow-step small{font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.5}
+.people-v04{background:#e9e4dc;color:var(--ink);padding:14vh 6vw 12vh;display:block;min-height:120svh}
+.people-v04-head{display:grid;grid-template-columns:.45fr 1fr;column-gap:8vw;align-items:start;margin-bottom:8vh}.people-v04-head .label{grid-column:1}.people-v04-head h2{grid-column:1}.people-v04-head .people-quote{grid-column:2;grid-row:1/3;align-self:end;font-size:clamp(30px,3.6vw,55px);line-height:1.04;margin:0}
+.people-v04-grid{display:grid;grid-template-columns:1.15fr .9fr .9fr;gap:2px;background:rgba(10,10,9,.18)}
+.team-card{background:#121211;color:var(--bone);min-height:70vh;display:flex;flex-direction:column}.team-card .brand-photo-placeholder{flex:1;border:0;min-height:0}.team-meta{padding:22px 24px 25px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:20px;align-items:end}.team-meta strong{font-size:16px;text-transform:uppercase;letter-spacing:.04em}.team-meta span{font-size:8px;letter-spacing:.13em;text-transform:uppercase;opacity:.55;text-align:right}
+@media(max-width:820px){.design-process-intro,.process-band-head,.people-v04-head{grid-template-columns:1fr}.design-process-visuals{grid-template-columns:1fr}.process-flow{grid-template-columns:repeat(2,1fr)}.flow-step:nth-child(2n){border-right:0}.people-v04-head .label,.people-v04-head h2,.people-v04-head .people-quote{grid-column:1;grid-row:auto}.people-v04-head .people-quote{margin-top:30px}.people-v04-grid{grid-template-columns:1fr}.team-card{min-height:75svh}.cph-right{min-height:70svh}.origin-object{min-height:80svh}.brand-photo-placeholder{min-height:56svh}}
+
+/* v0.5 — THE CAINTÈ STANDARD full chapter */
+.standard-portal{position:relative;min-height:108svh;overflow:hidden;display:flex;align-items:flex-end;background:#060606;color:var(--bone)}
+.standard-portal-media{position:absolute;inset:0;background:radial-gradient(circle at 70% 42%,rgba(255,255,255,.13),transparent 18%),linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.72)),url("https://cainte.com/cdn/shop/files/original-necklace-694966_720x.jpg?v=1731514091") center 48%/cover no-repeat;filter:saturate(.58) contrast(1.12);transform:scale(1.04);transition:transform 1.6s var(--ease)}
+.standard-portal.in-view .standard-portal-media{transform:scale(1)}
+.standard-portal-content{position:relative;z-index:2;width:100%;padding:0 6vw 8vh;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:end}
+.standard-portal-title{font-size:clamp(64px,9vw,145px);line-height:.82;letter-spacing:-.062em;text-transform:uppercase;font-weight:400;margin:0}
+.standard-portal-side{justify-self:end;max-width:430px}.standard-portal-side p{font-size:clamp(27px,3vw,44px);line-height:1.03;margin:0 0 34px}
+.standard-chapter{background:var(--bone);color:var(--ink)}
+.std-identity{min-height:115svh;display:grid;grid-template-columns:.92fr 1.08fr;background:var(--bone)}
+.std-identity-copy{padding:14vh 6vw;display:flex;flex-direction:column;justify-content:center}.std-identity-copy h2,.std-pvd-copy h2,.std-clear-copy h2,.std-guarantee-head h2,.std-care-copy h2{font-size:clamp(56px,7.7vw,125px);line-height:.84;letter-spacing:-.058em;text-transform:uppercase;font-weight:400;margin:22px 0 34px}
+.std-identity-copy p,.std-pvd-copy p,.std-clear-copy p,.std-care-copy p{font-size:clamp(20px,2.15vw,34px);line-height:1.16;max-width:700px;margin:0}
+.std-piece{position:relative;background:#11110f;min-height:115svh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.std-piece img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:54% 62%;filter:saturate(.58) contrast(1.1);opacity:.88;transform:scale(1.38)}
+.std-piece::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.65) 100%)}
+.std-piece-data{position:absolute;z-index:2;left:34px;right:34px;bottom:34px;color:var(--bone);display:grid;grid-template-columns:repeat(2,1fr);gap:22px 32px}
+.std-data{border-top:1px solid rgba(255,255,255,.3);padding-top:12px}.std-data small{display:block;font-size:8px;letter-spacing:.16em;text-transform:uppercase;opacity:.55;margin-bottom:7px}.std-data strong{font-size:14px;letter-spacing:.03em;font-weight:500}
+.std-material{min-height:125svh;background:#080808;color:var(--bone);position:relative;display:flex;align-items:center;overflow:hidden}
+.std-material-number{position:absolute;right:-.04em;top:8vh;font-size:clamp(170px,30vw,480px);line-height:.75;letter-spacing:-.085em;font-weight:300;color:rgba(255,255,255,.055)}
+.std-material-inner{position:relative;z-index:2;width:100%;padding:15vh 6vw;display:grid;grid-template-columns:.78fr 1.22fr;gap:7vw;align-items:center}
+.std-material-title{font-size:clamp(63px,9vw,145px);line-height:.82;letter-spacing:-.065em;text-transform:uppercase;font-weight:400;margin:22px 0 0}
+.std-material-copy{max-width:700px}.std-material-copy p{font-size:clamp(21px,2.3vw,37px);line-height:1.13;margin:0 0 50px}.std-benefits{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.18)}
+.std-benefit{padding:20px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:10px;letter-spacing:.16em;text-transform:uppercase}.std-benefit:nth-child(odd){padding-right:22px}.std-benefit:nth-child(even){padding-left:22px;border-left:1px solid rgba(255,255,255,.18)}
+.std-pvd{min-height:125svh;background:#d7d0c5;color:var(--ink);display:grid;grid-template-columns:1fr 1fr}
+.std-pvd-visual{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:125svh;background:radial-gradient(circle at 50% 46%,#ece7de 0 17%,#c4bbad 42%,#aea496 100%)}
+.std-ring{width:min(52vw,520px);aspect-ratio:1;border-radius:50%;border:clamp(22px,4vw,58px) solid #b8ad9d;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55),0 45px 80px rgba(0,0,0,.18);position:relative;transition:transform .9s var(--ease)}
+.std-pvd.in-view .std-ring{transform:rotate(-10deg)}
+.std-ring::before{content:"";position:absolute;inset:-5px;border-radius:50%;border:5px solid rgba(229,211,167,.95);box-shadow:0 0 25px rgba(232,211,154,.28)}
+.std-layer-label{position:absolute;font-size:8px;letter-spacing:.16em;text-transform:uppercase}.std-layer-label.base{left:7%;bottom:16%}.std-layer-label.finish{right:7%;top:18%}
+.std-pvd-copy{padding:14vh 6vw;display:flex;flex-direction:column;justify-content:center}.std-pvd-steps{margin-top:48px;display:grid;gap:0;border-top:1px solid rgba(10,10,9,.18)}
+.std-pvd-step{display:grid;grid-template-columns:60px 1fr;gap:18px;padding:17px 0;border-bottom:1px solid rgba(10,10,9,.18);align-items:center}.std-pvd-step span{font-size:9px;letter-spacing:.15em}.std-pvd-step strong{font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.std-everyday{background:#0b0b0a;color:var(--bone);padding:14vh 0 0}.std-everyday-head{padding:0 6vw 10vh;display:grid;grid-template-columns:1fr .65fr;gap:8vw;align-items:end}.std-everyday-head h2{font-size:clamp(60px,8.5vw,138px);line-height:.83;letter-spacing:-.062em;text-transform:uppercase;font-weight:400;margin:22px 0 0}.std-everyday-head p{font-size:clamp(26px,3vw,43px);line-height:1.05;margin:0}
+.std-life-grid{display:grid;grid-template-columns:repeat(4,1fr);min-height:62vh;border-top:1px solid rgba(255,255,255,.18)}
+.std-life{position:relative;padding:34px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(255,255,255,.18);overflow:hidden}.std-life:last-child{border-right:0}.std-life::before{content:"";position:absolute;inset:0;opacity:.1;transition:opacity .45s var(--ease),transform .8s var(--ease);transform:scale(1.03)}.std-life:hover::before{opacity:.25;transform:scale(1)}
+.std-life.water::before{background:radial-gradient(circle at 40% 30%,#7c91a4,transparent 32%),linear-gradient(#15212a,#080b0d)}.std-life.heat::before{background:radial-gradient(circle at 62% 35%,#b77c52,transparent 28%),linear-gradient(#21130d,#090706)}.std-life.sweat::before{background:radial-gradient(circle at 52% 38%,#80776d,transparent 30%),linear-gradient(#171614,#090909)}.std-life.everyday::before{background:radial-gradient(circle at 50% 40%,#d9d0c1,transparent 24%),linear-gradient(#25231f,#0b0b0a)}
+.std-life>*{position:relative;z-index:1}.std-life-num{font-size:9px;letter-spacing:.16em;opacity:.55}.std-life-word{font-size:clamp(28px,3.1vw,54px);text-transform:uppercase;letter-spacing:-.04em}.std-life small{font-size:9px;line-height:1.5;letter-spacing:.08em;text-transform:uppercase;opacity:.62;max-width:180px}
+.std-clear{min-height:115svh;background:var(--bone);display:grid;grid-template-columns:1fr 1fr;align-items:center}.std-clear-copy{padding:14vh 6vw}.std-clear-card{margin:8vh 6vw 8vh 0;background:#11110f;color:var(--bone);padding:42px;min-height:70vh;display:flex;flex-direction:column;justify-content:space-between}.std-clear-card-top{display:flex;justify-content:space-between;gap:20px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;opacity:.65}.std-clear-card h3{font-size:clamp(34px,4vw,64px);line-height:.95;letter-spacing:-.045em;text-transform:uppercase;margin:55px 0}.std-specs{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.18)}.std-spec{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.18)}.std-spec:nth-child(odd){padding-right:20px}.std-spec:nth-child(even){padding-left:20px;border-left:1px solid rgba(255,255,255,.18)}.std-spec small{display:block;font-size:8px;letter-spacing:.16em;text-transform:uppercase;opacity:.48;margin-bottom:6px}.std-spec strong{font-size:13px;font-weight:500}
+.std-proof{min-height:118svh;background:#141412;color:var(--bone);position:relative;overflow:hidden;padding:0}
+.std-proof-grid{min-height:118svh;display:grid;grid-template-columns:.82fr 1.18fr;align-items:stretch}
+.std-proof-copy{padding:14vh 6vw 10vh;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:2}
+.std-proof-copy h2{font-size:clamp(58px,7.6vw,126px);line-height:.84;letter-spacing:-.06em;text-transform:uppercase;font-weight:400;margin:22px 0 36px}
+.std-proof-copy p{font-size:clamp(22px,2.45vw,38px);line-height:1.08;margin:0;max-width:630px}
+.std-proof-statement{padding-top:8vh;margin-top:8vh;border-top:1px solid rgba(255,255,255,.2);font-size:clamp(27px,3.3vw,54px);line-height:.96;letter-spacing:-.035em;text-transform:uppercase;max-width:690px}
+.std-proof-statement span{display:block;opacity:.48}
+.std-proof-visual{position:relative;overflow:hidden;min-height:118svh;background:radial-gradient(circle at 53% 45%,rgba(217,209,196,.18),transparent 28%),linear-gradient(145deg,#24231f,#080808 73%)}
+.std-proof-visual img{position:absolute;inset:-7%;width:114%;height:114%;object-fit:cover;object-position:center;filter:saturate(.52) contrast(1.08) brightness(.72);transform:scale(1.08);transition:transform 1.25s var(--ease),filter 1.25s var(--ease)}
+.std-proof-visual:hover img{transform:scale(1.14);filter:saturate(.62) contrast(1.1) brightness(.78)}
+.std-proof-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,18,.45),transparent 28%),linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.44));pointer-events:none}
+.std-detail-callout{position:absolute;z-index:3;font-size:8px;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:12px;color:rgba(242,239,233,.8);pointer-events:none}
+.std-detail-callout::before{content:"";width:46px;height:1px;background:rgba(242,239,233,.48)}
+.std-detail-callout.form{left:7%;top:18%}.std-detail-callout.surface{right:7%;top:35%;flex-direction:row-reverse}.std-detail-callout.finish{left:12%;bottom:29%}.std-detail-callout.detail{right:9%;bottom:13%;flex-direction:row-reverse}
+.std-proof-caption{position:absolute;left:6%;right:6%;bottom:5vh;z-index:3;display:flex;justify-content:space-between;gap:20px;font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:rgba(242,239,233,.48)}
+.std-guarantee{background:#eee9e1;color:var(--ink);padding:14vh 6vw}.std-guarantee-head{display:grid;grid-template-columns:1fr .75fr;gap:8vw;align-items:end}.std-guarantee-head p{font-size:clamp(24px,2.7vw,41px);line-height:1.06;margin:0}.std-guarantee-grid{margin-top:10vh;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(10,10,9,.16)}.std-cover{background:var(--bone);padding:42px;min-height:58vh}.std-cover-title{font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:55px}.std-cover-list{display:grid;gap:0}.std-cover-row{padding:18px 0;border-top:1px solid rgba(10,10,9,.18);display:flex;justify-content:space-between;gap:20px;font-size:13px;text-transform:uppercase;letter-spacing:.04em}.std-cover-row:last-child{border-bottom:1px solid rgba(10,10,9,.18)}.std-cover-row span:last-child{opacity:.45}.std-how{margin-top:2px;background:#0b0b0a;color:var(--bone);display:grid;grid-template-columns:repeat(4,1fr)}.std-how-step{padding:34px;min-height:38vh;border-right:1px solid rgba(255,255,255,.16);display:flex;flex-direction:column;justify-content:space-between}.std-how-step:last-child{border-right:0}.std-how-step span{font-size:9px;letter-spacing:.16em;opacity:.5}.std-how-step strong{font-size:clamp(20px,2.2vw,34px);line-height:1;text-transform:uppercase;letter-spacing:-.025em}
+.std-care{min-height:105svh;background:#a9a095;color:#0b0b0a;display:grid;grid-template-columns:.9fr 1.1fr}.std-care-copy{padding:14vh 6vw;display:flex;flex-direction:column;justify-content:center}.std-care-visual{position:relative;overflow:hidden;background:linear-gradient(150deg,#c9c0b4,#8e857b);display:flex;align-items:center;justify-content:center}.std-care-visual img{width:80%;height:80%;object-fit:cover;filter:saturate(.55) contrast(1.03);mix-blend-mode:multiply}.std-care-tags{margin-top:48px;display:flex;gap:10px;flex-wrap:wrap}.std-care-tag{border:1px solid rgba(10,10,9,.32);padding:10px 13px;font-size:9px;letter-spacing:.15em;text-transform:uppercase}
+.std-to-edit{min-height:125svh;background:#050505;color:var(--bone);position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:14vh 6vw}.std-to-edit::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.085),transparent 25%),linear-gradient(180deg,#050505,#0c0c0b)}.std-to-edit-inner{position:relative;z-index:2}.std-to-edit h2{font-size:clamp(62px,9vw,145px);line-height:.84;letter-spacing:-.062em;text-transform:uppercase;font-weight:400;margin:0}.std-to-edit p{font-size:clamp(26px,3vw,43px);margin:35px 0 44px;opacity:.75}
+@media(max-width:820px){.standard-portal-content,.std-identity,.std-material-inner,.std-pvd,.std-everyday-head,.std-clear,.std-proof-head,.std-guarantee-head,.std-care{grid-template-columns:1fr}.standard-portal-content{padding:0 20px 7vh}.standard-portal-title{font-size:clamp(57px,17vw,96px)}.standard-portal-side{justify-self:start}.std-identity-copy,.std-pvd-copy,.std-clear-copy,.std-care-copy{padding:11vh 20px}.std-piece{min-height:85svh}.std-material-inner{padding:12vh 20px}.std-material-number{font-size:55vw;top:7vh}.std-benefits{grid-template-columns:1fr}.std-benefit:nth-child(even){padding-left:0;border-left:0}.std-life-grid{grid-template-columns:1fr 1fr}.std-life{min-height:43vh}.std-life:nth-child(2){border-right:0}.std-life:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.18)}.std-everyday-head{padding:11vh 20px 7vh}.std-clear-card{margin:0 20px 10vh;min-height:62vh}.std-proof{padding:11vh 20px}.std-proof-grid{grid-template-columns:1fr 1fr}.std-proof-item:nth-child(2){border-right:0}.std-proof-item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.18)}.std-guarantee{padding:11vh 20px}.std-guarantee-grid{grid-template-columns:1fr}.std-cover{min-height:auto}.std-how{grid-template-columns:1fr 1fr}.std-how-step{min-height:31vh}.std-how-step:nth-child(2){border-right:0}.std-how-step:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.16)}.std-care-visual{min-height:75svh}.std-to-edit{padding:12vh 20px}}
+
+
+/* v0.7 — quality section simplified; unverified proof fields removed */
+.std-pvd-visual{background:linear-gradient(145deg,#d9d3c9 0%,#bdb4a7 48%,#958c80 100%)}
+.material-stack{position:relative;width:min(72%,560px);height:min(58vh,560px);perspective:1200px}
+.material-slab{position:absolute;left:9%;right:9%;height:30%;border:1px solid rgba(255,255,255,.34);box-shadow:0 30px 60px rgba(0,0,0,.16);display:flex;justify-content:space-between;align-items:flex-end;padding:22px 24px;transition:transform .85s var(--ease),box-shadow .85s var(--ease);backdrop-filter:blur(2px)}
+.material-slab span{font-size:9px;letter-spacing:.16em;opacity:.56}.material-slab b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:500}
+.slab-steel{top:12%;background:linear-gradient(135deg,#d2d4d3,#8d9290);transform:translate3d(-5%,0,0) rotate(-4deg)}
+.slab-pvd{top:35%;background:linear-gradient(135deg,rgba(236,230,218,.86),rgba(151,139,121,.92));transform:translate3d(4%,0,30px) rotate(2deg)}
+.slab-gold{top:58%;background:linear-gradient(135deg,#d8c18a,#a9894f);transform:translate3d(-1%,0,60px) rotate(-1deg)}
+.std-pvd-visual:hover .slab-steel{transform:translate3d(-10%,-7%,0) rotate(-6deg)}
+.std-pvd-visual:hover .slab-pvd{transform:translate3d(8%,0,30px) rotate(3deg)}
+.std-pvd-visual:hover .slab-gold{transform:translate3d(-2%,8%,60px) rotate(-2deg);box-shadow:0 42px 80px rgba(0,0,0,.22)}
+.material-stack-note{position:absolute;left:7%;bottom:7%;font-size:9px;letter-spacing:.17em;text-transform:uppercase;opacity:.55}
+.std-guarantee-action{margin-top:2px;background:#0b0b0a;color:var(--bone);padding:34px 38px;display:flex;justify-content:space-between;gap:40px;align-items:end}
+.std-guarantee-action small{display:block;font-size:8px;letter-spacing:.16em;text-transform:uppercase;opacity:.5;margin-bottom:12px}
+.std-guarantee-action strong{display:block;max-width:640px;font-size:clamp(21px,2.3vw,35px);line-height:1.05;font-weight:400}
+.dark-cta{border-color:rgba(255,255,255,.4);white-space:nowrap}
+@media(max-width:820px){.material-stack{width:82%;height:58vh}.std-guarantee-action{flex-direction:column;align-items:flex-start;padding:30px 24px}.std-piece img{transform:scale(1.28);object-position:54% 58%}.std-proof-grid{grid-template-columns:1fr;min-height:auto}.std-proof-copy{padding:11vh 20px 9vh}.std-proof-statement{padding-top:6vh;margin-top:6vh}.std-proof-visual{min-height:78svh}.std-detail-callout::before{width:28px}.std-detail-callout.form{left:20px}.std-detail-callout.surface{right:20px}.std-detail-callout.finish{left:20px}.std-detail-callout.detail{right:20px}.std-proof-caption{left:20px;right:20px}}
+
+
+/* ========================= THE EDIT / v0.11 ========================= */
+.edit-world{background:var(--bone);color:var(--ink)}
+.edit-portal{position:relative;min-height:108svh;display:flex;align-items:flex-end;overflow:hidden;background:#0b0b0a;color:var(--bone)}
+.edit-portal-media{position:absolute;inset:-3%;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.72)),url("https://cainte.com/cdn/shop/files/newsletter_drop_003-13.jpg?v=1742746167&width=1800") center 46%/cover no-repeat;transform:scale(1.05);transition:1.5s var(--ease)}
+.edit-portal.in-view .edit-portal-media{transform:scale(1)}
+.edit-portal-content{position:relative;z-index:2;width:100%;padding:0 6vw 8vh;display:grid;grid-template-columns:1fr .72fr;align-items:end;gap:5vw}
+.edit-portal-title{font-size:clamp(70px,11vw,170px);line-height:.8;letter-spacing:-.065em;text-transform:uppercase;font-weight:400;margin:0}
+.edit-portal-side{justify-self:end;max-width:470px}.edit-portal-side p{font-size:clamp(28px,3.3vw,50px);line-height:1.02;margin:0}
+
+.edit-energy{min-height:126svh;background:#11110f;color:var(--bone);padding:12vh 6vw 9vh;display:flex;flex-direction:column;justify-content:space-between}
+.edit-energy-head{display:grid;grid-template-columns:1fr .75fr;gap:6vw;align-items:end}.edit-energy-head h2{font-size:clamp(58px,8.5vw,132px);line-height:.84;letter-spacing:-.06em;text-transform:uppercase;font-weight:400;margin:22px 0 0}.edit-energy-head p{font-size:clamp(24px,2.7vw,42px);line-height:1.06;margin:0;max-width:600px}
+.energy-strip{margin-top:9vh;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;min-height:64svh;background:rgba(255,255,255,.1)}
+.energy-panel{position:relative;overflow:hidden;background:#1c1b18;isolation:isolate}.energy-panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.62));z-index:-1}.energy-panel-bg{position:absolute;inset:-5%;z-index:-2;background-size:cover;background-repeat:no-repeat;transition:1.1s var(--ease)}.energy-panel:hover .energy-panel-bg{transform:scale(1.045)}
+.energy-panel.clean .energy-panel-bg{background-image:url("https://cainte.com/cdn/shop/files/original-necklace-694966_720x.jpg?v=1731514091");background-position:center 55%}
+.energy-panel.layered .energy-panel-bg{background-image:url("https://cainte.com/cdn/shop/files/v111-14.jpg?v=1687427909");background-position:center 35%}
+.energy-panel.bolder .energy-panel-bg{background-image:url("https://cainte.com/cdn/shop/files/newsletter_drop_003-13.jpg?v=1742746167&width=1600");background-position:center}
+.energy-panel-copy{position:absolute;left:28px;right:28px;bottom:28px}.energy-num{font-size:9px;letter-spacing:.17em;opacity:.62}.energy-name{font-size:clamp(30px,3.7vw,58px);line-height:.95;text-transform:uppercase;letter-spacing:-.04em;margin-top:12px}.energy-note{font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.67;margin-top:13px}
+.energy-footer{display:flex;justify-content:space-between;gap:30px;align-items:flex-end;margin-top:4vh}.energy-footer strong{font-size:clamp(24px,3vw,45px);font-weight:400;letter-spacing:-.035em}.energy-footer span{font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.55;max-width:390px;line-height:1.5;text-align:right}
+
+.edit-builder{min-height:128svh;background:#eee9e1;color:var(--ink);display:grid;grid-template-columns:1.08fr .92fr}
+.builder-visual{position:relative;overflow:hidden;background:#d7d0c6;min-height:128svh;display:flex;align-items:center;justify-content:center;padding:8vh 4vw}
+.builder-visual::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 48% 42%,rgba(255,255,255,.72),transparent 38%),linear-gradient(135deg,rgba(255,255,255,.28),transparent 46%)}
+.builder-visual::after{content:"";position:absolute;width:66%;height:72%;left:17%;top:13%;border:1px solid rgba(10,10,9,.075);border-radius:48% 48% 44% 44% / 22% 22% 74% 74%;pointer-events:none}
+.layer-stage-shell{position:relative;z-index:2;width:min(760px,92%);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center}
+.jewelry-stage{width:100%;height:100%;overflow:visible;--baseMetal:#b9bbbd;--baseGlow:#f1f2f2;--secondMetal:#b79659;--secondGlow:#f1d395;filter:drop-shadow(0 18px 14px rgba(30,25,18,.12));transition:.5s var(--ease)}
+.jewelry-stage.silver{--baseMetal:#b9bbbd;--baseGlow:#f4f5f5;--secondMetal:#aeb1b3;--secondGlow:#eff0f0}.jewelry-stage.gold{--baseMetal:#b18b49;--baseGlow:#efd18b;--secondMetal:#b18b49;--secondGlow:#efd18b}.jewelry-stage.mixed{--baseMetal:#b9bbbd;--baseGlow:#f4f5f5;--secondMetal:#b18b49;--secondGlow:#efd18b}
+.neck-guide{fill:none;stroke:rgba(10,10,9,.08);stroke-width:1.25;stroke-dasharray:3 8}.base-chain,.second-chain,.cross-chain{fill:none;vector-effect:non-scaling-stroke;transition:stroke .45s var(--ease),opacity .45s var(--ease),transform .6s var(--ease)}
+.base-chain{stroke:var(--baseMetal);stroke-width:4.2}.base-highlight{fill:none;stroke:var(--baseGlow);stroke-width:1;opacity:.8}.original-mark{fill:var(--baseMetal);stroke:var(--baseGlow);stroke-width:.8;transition:.45s}
+.second-chain{stroke:var(--secondMetal);stroke-width:7.2;stroke-linecap:round;stroke-dasharray:1 5}.second-highlight{fill:none;stroke:var(--secondGlow);stroke-width:1.1;opacity:.75}.cross-chain{stroke:var(--secondMetal);stroke-width:3.2}.cross-pendant{stroke:var(--secondMetal);stroke-width:7;stroke-linecap:round;transition:.45s}
+.layer-group{opacity:1;transform-origin:50% 20%;transition:opacity .4s var(--ease),transform .55s var(--ease)}.layer-group.hidden{opacity:0;transform:translateY(-16px) scale(.98);pointer-events:none}
+.stage-caption{position:absolute;left:0;right:0;bottom:4%;display:flex;justify-content:space-between;gap:24px;font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:rgba(10,10,9,.56)}.stage-caption strong{display:block;color:var(--ink);font-size:10px;font-weight:500;margin-top:7px;letter-spacing:.09em}.stage-caption>div:last-child{text-align:right}
+.builder-visual-copy{position:absolute;z-index:4;left:5vw;top:8vh;color:var(--ink);max-width:560px}.builder-visual-copy h2{font-size:clamp(48px,6.2vw,102px);line-height:.84;letter-spacing:-.06em;text-transform:uppercase;font-weight:400;margin:18px 0}.builder-visual-copy p{font-size:clamp(20px,2vw,31px);max-width:520px;margin:0;opacity:.72}
+.builder-ui{padding:12vh 6vw 8vh;display:flex;flex-direction:column;justify-content:center}.builder-kicker{font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.58}.builder-title{font-size:clamp(44px,5.4vw,82px);line-height:.9;letter-spacing:-.05em;text-transform:uppercase;font-weight:400;margin:24px 0 46px}.builder-step{padding:25px 0;border-top:1px solid rgba(10,10,9,.2)}.builder-step:last-of-type{border-bottom:1px solid rgba(10,10,9,.2)}.builder-step-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:17px}.builder-step-head span{font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.55}.builder-step-head strong{font-size:15px;font-weight:500}.builder-options{display:flex;flex-wrap:wrap;gap:8px}.builder-option{appearance:none;background:transparent;border:1px solid rgba(10,10,9,.24);padding:11px 13px;font:inherit;font-size:9px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:.25s;color:inherit}.builder-option:hover,.builder-option.active{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.builder-result{margin-top:34px;background:var(--ink);color:var(--bone);padding:28px}.builder-result-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.builder-result small{font-size:8px;letter-spacing:.16em;text-transform:uppercase;opacity:.58}.builder-result strong{display:block;font-size:clamp(26px,2.5vw,38px);font-weight:400;margin-top:10px;line-height:1}.builder-list{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.builder-chip{border:1px solid rgba(255,255,255,.2);padding:9px 10px;font-size:8px;letter-spacing:.12em;text-transform:uppercase}.builder-result .cta{margin-top:26px}
+
+.edit-moments{background:#0b0b0a;color:var(--bone);padding:12vh 6vw 10vh;min-height:120svh}.moments-head{display:grid;grid-template-columns:1fr .75fr;gap:6vw;align-items:end;margin-bottom:8vh}.moments-head h2{font-size:clamp(58px,8vw,125px);line-height:.84;letter-spacing:-.06em;text-transform:uppercase;font-weight:400;margin:20px 0 0}.moments-head p{font-size:clamp(24px,2.6vw,40px);line-height:1.06;margin:0}.moment-list{border-top:1px solid rgba(255,255,255,.2)}.moment{position:relative;min-height:18vh;border-bottom:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:90px 1fr auto;gap:24px;align-items:center;overflow:hidden;padding:0 24px;isolation:isolate}.moment-bg{position:absolute;inset:-25%;z-index:-2;background-size:cover;background-position:center;opacity:0;transform:scale(1.05);transition:.65s var(--ease)}.moment::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(5,5,5,.18);opacity:0;transition:.45s}.moment:hover .moment-bg{opacity:.55;transform:scale(1)}.moment:hover::after{opacity:1}.moment-num{font-size:9px;letter-spacing:.16em;opacity:.55}.moment-name{font-size:clamp(33px,5vw,72px);line-height:.9;text-transform:uppercase;letter-spacing:-.05em}.moment-note{font-size:9px;letter-spacing:.13em;text-transform:uppercase;opacity:.66}.moment.everyday .moment-bg{background-image:url("https://cainte.com/cdn/shop/files/IMG_9431.jpg?v=1721833787&width=1600")}.moment.night .moment-bg{background-image:url("https://cainte.com/cdn/shop/files/newsletter_drop_003-13.jpg?v=1742746167&width=1600")}.moment.summer .moment-bg{background-image:url("https://cainte.com/cdn/shop/files/v111-14.jpg?v=1687427909")}.moment.formal .moment-bg{background-image:url("https://cainte.com/cdn/shop/files/original-necklace-694966_720x.jpg?v=1731514091")}
+.essentials{margin-top:10vh;display:grid;grid-template-columns:.65fr 1.35fr;gap:6vw;align-items:start}.essentials h3{font-size:clamp(33px,4.3vw,68px);font-weight:400;text-transform:uppercase;letter-spacing:-.045em;line-height:.94;margin:18px 0 0}.essential-roles{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}.essential-role{min-height:24vh;padding:22px 14px;border-right:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;justify-content:space-between}.essential-role:last-child{border-right:0}.essential-role span{font-size:8px;letter-spacing:.16em;opacity:.48}.essential-role strong{font-size:clamp(15px,1.8vw,26px);font-weight:400;text-transform:uppercase;line-height:1}
+
+.edit-campaign{min-height:126svh;background:var(--bone);color:var(--ink);display:grid;grid-template-columns:1.12fr .88fr}.campaign-visual{position:relative;min-height:126svh;background:linear-gradient(180deg,transparent 48%,rgba(0,0,0,.66)),url("https://cainte.com/cdn/shop/files/newsletter_drop_003-13.jpg?v=1742746167&width=1800") center/cover no-repeat;color:var(--bone);padding:7vh 5vw;display:flex;flex-direction:column;justify-content:flex-end}.campaign-visual h2{font-size:clamp(58px,8vw,126px);line-height:.84;letter-spacing:-.06em;text-transform:uppercase;font-weight:400;margin:18px 0 28px}.campaign-visual p{font-size:clamp(22px,2.3vw,35px);max-width:620px;margin:0 0 32px}.campaign-visual .cta{align-self:flex-start}
+.gift-edit{padding:10vh 5vw;display:flex;flex-direction:column;justify-content:center}.gift-edit h3{font-size:clamp(48px,5.7vw,88px);line-height:.87;letter-spacing:-.055em;text-transform:uppercase;font-weight:400;margin:20px 0 34px}.gift-filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}.gift-filter{appearance:none;border:1px solid rgba(10,10,9,.25);background:transparent;color:inherit;min-height:74px;padding:16px;text-align:left;font:inherit;cursor:pointer;transition:.3s var(--ease);display:flex;flex-direction:column;justify-content:space-between}.gift-filter span{font-size:8px;letter-spacing:.15em;opacity:.48}.gift-filter strong{font-size:16px;font-weight:400;text-transform:uppercase;letter-spacing:-.01em}.gift-filter:hover,.gift-filter.active{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.gift-preview{background:#ded8cf;padding:28px;margin-top:8px;min-height:270px;display:flex;flex-direction:column;justify-content:space-between}.gift-preview-kicker{font-size:8px;letter-spacing:.16em;text-transform:uppercase;opacity:.5}.gift-preview h4{font-size:clamp(27px,3vw,42px);font-weight:400;line-height:.98;letter-spacing:-.035em;margin:12px 0 14px}.gift-preview p{font-size:13px;line-height:1.5;opacity:.65;max-width:430px;margin:0}.gift-chips{display:flex;flex-wrap:wrap;gap:7px;margin:23px 0 22px}.gift-chip{border:1px solid rgba(10,10,9,.2);padding:8px 9px;font-size:8px;letter-spacing:.11em;text-transform:uppercase}.gift-preview .cta{align-self:flex-start}
+
+.edit-to-your{min-height:112svh;background:#050505;color:var(--bone);display:flex;align-items:center;justify-content:center;text-align:center;padding:13vh 6vw;position:relative;overflow:hidden}.edit-to-your::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 48%,rgba(255,255,255,.085),transparent 25%)}.edit-to-your-inner{position:relative;z-index:2}.edit-to-your h2{font-size:clamp(68px,10vw,155px);line-height:.82;letter-spacing:-.064em;text-transform:uppercase;font-weight:400;margin:0}.edit-to-your p{font-size:clamp(27px,3vw,44px);margin:32px 0 40px;opacity:.75}
+
+@media(max-width:820px){
+.edit-portal-content,.edit-energy-head,.moments-head,.essentials{grid-template-columns:1fr}.edit-portal-content{padding:0 20px 7vh}.edit-portal-title{font-size:clamp(68px,20vw,110px)}.edit-portal-side{justify-self:start}.edit-energy{padding:11vh 20px 8vh}.energy-strip{grid-template-columns:1fr;min-height:auto}.energy-panel{min-height:55svh}.energy-footer{align-items:flex-start;flex-direction:column}.energy-footer span{text-align:left}.edit-builder{grid-template-columns:1fr}.builder-visual{min-height:92svh;padding:11vh 16px 5vh}.builder-visual-copy{left:20px;right:20px;top:9vh}.layer-stage-shell{width:96%}.stage-caption{bottom:1%}.builder-ui{padding:10vh 20px}.moment{grid-template-columns:48px 1fr;min-height:20vh;padding:0}.moment-note{display:none}.edit-moments{padding:11vh 20px 9vh}.essential-roles{grid-template-columns:1fr 1fr}.essential-role{min-height:20vh}.essential-role:nth-child(even){border-right:0}.edit-campaign{grid-template-columns:1fr}.campaign-visual{min-height:88svh;padding:7vh 20px}.gift-edit{padding:10vh 20px}.gift-filter-grid{grid-template-columns:1fr}.gift-preview{min-height:250px}.edit-to-your{padding:12vh 20px}}
+
+
+/* v0.12 — real floating product photography */
+.real-jewelry-stage{position:relative;overflow:hidden;background:#ebe6de;border:1px solid rgba(10,10,9,.06);isolation:isolate}
+.floating-jewel{position:absolute;display:block;object-fit:contain;mix-blend-mode:multiply;filter:contrast(1.04) drop-shadow(0 22px 24px rgba(20,18,14,.11));transition:opacity .4s var(--ease),transform .45s var(--ease),width .45s var(--ease),height .45s var(--ease),top .45s var(--ease);user-select:none;pointer-events:none}
+.floating-jewel-base{width:90%;height:90%;left:50%;top:57%;transform:translate(-50%,-50%)}
+.floating-jewel-second{width:78%;height:78%;left:50%;top:42%;transform:translate(-50%,-50%)}
+.real-jewelry-stage.no-second .floating-jewel-base{width:96%;height:96%;top:53%}
+.real-jewelry-stage.no-second .floating-jewel-second{opacity:0;transform:translate(-50%,-50%) scale(.96)}
+.floating-note{position:absolute;right:4%;top:4%;font-size:8px;letter-spacing:.16em;text-transform:uppercase;opacity:.42;z-index:4}
+@media(max-width:760px){.floating-jewel-base{width:96%;height:96%;top:58%}.floating-jewel-second{width:84%;height:84%;top:41%}.real-jewelry-stage.no-second .floating-jewel-base{width:100%;height:100%;top:54%}.floating-note{right:5%;top:5%}}
+
+/* v0.16 — THE EDIT / interactive ring selector */
+.ring-selector{
+  min-height:118svh;
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  background:#e9e3da;
+  color:var(--ink);
+  border-top:1px solid rgba(10,10,9,.08);
+  border-bottom:1px solid rgba(10,10,9,.08);
+}
+.ring-preview{
+  position:relative;
+  min-height:118svh;
+  padding:32px 34px 34px;
+  display:flex;
+  flex-direction:column;
+  background:#d9c6b4;
+  overflow:hidden;
+}
+.ring-preview-top{
+  position:relative;
+  z-index:4;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.ring-preview-count{
+  font-size:9px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.58;
+}
+.ring-image-wrap{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  background:#cdb39f;
+}
+.ring-hand{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  opacity:0;
+  transform:scale(1.018);
+  transition:opacity .65s var(--ease),transform 1.1s var(--ease);
+}
+.ring-hand.active{
+  opacity:1;
+  transform:scale(1);
+}
+.ring-preview::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,.08),transparent 24%,transparent 66%,rgba(0,0,0,.28));
+  z-index:2;
+}
+.ring-preview-copy{
+  position:relative;
+  z-index:4;
+  margin-top:auto;
+  color:#fff;
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:28px;
+}
+.ring-mini{
+  display:block;
+  margin-bottom:9px;
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.7;
+}
+.ring-preview-copy h3{
+  margin:0;
+  font-size:clamp(48px,6vw,90px);
+  line-height:.86;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+  font-weight:400;
+}
+.ring-preview-copy p{
+  margin:0 0 5px;
+  max-width:230px;
+  font-size:18px;
+  line-height:1.25;
+  text-align:right;
+}
+.ring-selector-ui{
+  min-height:118svh;
+  padding:13vh 6vw 8vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.ring-ui-kicker{
+  font-size:9px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.58;
+}
+.ring-selector-ui h2{
+  margin:24px 0 22px;
+  max-width:620px;
+  font-size:clamp(50px,6vw,92px);
+  line-height:.88;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+  font-weight:400;
+}
+.ring-ui-intro{
+  max-width:500px;
+  margin:0 0 46px;
+  font-size:18px;
+  line-height:1.45;
+  opacity:.72;
+}
+.ring-options{
+  border-top:1px solid rgba(10,10,9,.22);
+}
+.ring-option{
+  width:100%;
+  appearance:none;
+  background:transparent;
+  color:inherit;
+  border:0;
+  border-bottom:1px solid rgba(10,10,9,.22);
+  padding:26px 0;
+  display:grid;
+  grid-template-columns:56px 1fr 24px;
+  align-items:center;
+  gap:18px;
+  text-align:left;
+  cursor:pointer;
+}
+.ring-option-num{
+  font-size:9px;
+  letter-spacing:.16em;
+  opacity:.5;
+}
+.ring-option-main strong{
+  display:block;
+  font-size:clamp(22px,2.1vw,32px);
+  font-weight:400;
+  letter-spacing:-.025em;
+  text-transform:uppercase;
+}
+.ring-option-main small{
+  display:block;
+  margin-top:6px;
+  font-size:8px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  opacity:.5;
+}
+.ring-option-mark{
+  width:16px;
+  height:16px;
+  border:1px solid rgba(10,10,9,.45);
+  border-radius:50%;
+  position:relative;
+}
+.ring-option.active .ring-option-mark::after{
+  content:"";
+  position:absolute;
+  inset:3px;
+  border-radius:50%;
+  background:var(--ink);
+}
+.ring-option.active .ring-option-main strong{
+  font-style:italic;
+  font-family:Georgia,serif;
+}
+.ring-selector-footer{
+  margin-top:34px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:28px;
+}
+.ring-selector-footer>span{
+  max-width:300px;
+  font-size:8px;
+  letter-spacing:.12em;
+  line-height:1.6;
+  text-transform:uppercase;
+  opacity:.48;
+}
+@media(max-width:760px){
+  .ring-selector{grid-template-columns:1fr}
+  .ring-preview{min-height:92svh;padding:22px 20px 24px}
+  .ring-preview-copy{align-items:flex-start;flex-direction:column;gap:8px}
+  .ring-preview-copy p{text-align:left}
+  .ring-selector-ui{min-height:auto;padding:10vh 20px}
+  .ring-selector-ui h2{font-size:clamp(50px,15vw,78px)}
+  .ring-option{grid-template-columns:42px 1fr 22px}
+  .ring-selector-footer{align-items:flex-start;flex-direction:column}
+}
+
+
+
+/* v0.19 — THE EDIT / ring stack builder, simplified rings */
+.ring-stack{
+  min-height:118svh;
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  background:#f4f1eb;
+  color:var(--ink);
+  border-top:1px solid rgba(10,10,9,.08);
+  border-bottom:1px solid rgba(10,10,9,.08);
+}
+.ring-stack-preview{
+  position:relative;
+  min-height:118svh;
+  padding:32px 34px 34px;
+  display:flex;
+  flex-direction:column;
+  background:#ffffff;
+  overflow:hidden;
+}
+.ring-stack-top{
+  position:relative;
+  z-index:4;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.ring-stack-count{
+  font-size:9px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.58;
+}
+.ring-stack-image{
+  position:relative;
+  flex:1;
+  min-height:76svh;
+  background:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.stack-ring{
+  position:absolute;
+  left:50%;
+  height:auto;
+  transition:opacity .28s var(--ease), transform .28s var(--ease);
+  filter:drop-shadow(0 8px 12px rgba(20,18,14,.08));
+}
+.stack-top{
+  top:18%;
+  width:min(190px,21vw);
+  transform:translate(-50%,-50%);
+}
+.stack-middle{
+  top:49%;
+  width:min(230px,25vw);
+  transform:translate(-50%,-50%);
+}
+.stack-bottom{
+  top:80%;
+  width:min(270px,29vw);
+  transform:translate(-50%,-50%);
+}
+.stack-ring.hidden{opacity:0}
+.ring-stack-copy{
+  position:relative;
+  z-index:4;
+  margin-top:auto;
+  color:var(--ink);
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:28px;
+  padding-top:18px;
+}
+.ring-stack-copy h3{
+  margin:0;
+  font-size:clamp(42px,5vw,76px);
+  line-height:.9;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+  font-weight:400;
+}
+.stack-summary{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:10px;
+  max-width:340px;
+}
+.stack-chip{
+  border:1px solid rgba(10,10,9,.16);
+  padding:8px 12px;
+  font-size:8px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  border-radius:999px;
+  color:var(--ink);
+  background:rgba(10,10,9,.03);
+}
+.ring-stack-ui{
+  min-height:118svh;
+  padding:13vh 6vw 8vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.stack-slot{
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px solid rgba(10,10,9,.18);
+}
+.stack-slot-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:20px;
+  margin-bottom:16px;
+}
+.stack-slot-head span{
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  opacity:.5;
+}
+.stack-slot-head strong{
+  font-size:20px;
+  text-transform:uppercase;
+  font-weight:400;
+  letter-spacing:-.02em;
+}
+.stack-options{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.stack-option{
+  appearance:none;
+  background:transparent;
+  color:inherit;
+  border:1px solid rgba(10,10,9,.18);
+  border-radius:999px;
+  padding:10px 14px;
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.stack-option.active{
+  background:var(--ink);
+  color:var(--bone);
+  border-color:var(--ink);
+}
+@media(max-width:760px){
+  .ring-stack{grid-template-columns:1fr}
+  .ring-stack-preview{min-height:92svh;padding:22px 20px 24px}
+  .ring-stack-image{min-height:60svh}
+  .stack-top{top:17%;width:min(170px,38vw)}
+  .stack-middle{top:49%;width:min(205px,46vw)}
+  .stack-bottom{top:81%;width:min(240px,54vw)}
+  .ring-stack-copy{align-items:flex-start;flex-direction:column;gap:12px}
+  .stack-summary{justify-content:flex-start;max-width:none}
+  .ring-stack-ui{min-height:auto;padding:10vh 20px}
+}
+  .ring-stack-preview{min-height:92svh;padding:22px 20px 24px}
+  .ring-stack-image{min-height:58svh}
+  .stack-top{top:23%;width:min(220px,46vw)}
+  .stack-middle{top:49%;width:min(255px,54vw)}
+  .stack-bottom{top:77%;width:min(290px,62vw)}
+  .ring-stack-copy{align-items:flex-start;flex-direction:column;gap:12px}
+  .stack-summary{justify-content:flex-start;max-width:none}
+  .ring-stack-ui{min-height:auto;padding:10vh 20px}
+}
+  .ring-stack-preview{min-height:94svh;padding:22px 20px 24px}
+  .stack-top{ top:35%; width:min(180px,42vw); }
+  .stack-middle{ top:50%; width:min(215px,49vw); }
+  .stack-bottom{ top:65%; width:min(245px,56vw); }
+  .ring-stack-copy{align-items:flex-start;flex-direction:column;gap:12px}
+  .stack-summary{justify-content:flex-start;max-width:none}
+  .ring-stack-ui{min-height:auto;padding:10vh 20px}
+}
+
+
+/* v0.21 — product imagery note */
+.ring-asset-note{
+  align-items:flex-end;
+  padding-top:8px;
+}
+.ring-asset-copy{
+  max-width:430px;
+}
+.ring-asset-copy strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:600;
+  opacity:.72;
+}
+.ring-asset-copy span{
+  display:block;
+  font-size:9px;
+  line-height:1.65;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.48;
+}
+@media(max-width:760px){
+  .ring-asset-note{align-items:flex-start}
+  .ring-asset-copy{max-width:none}
+}
+
+
+/* v0.22 — CAINTÈ-approved care guidance note */
+.care-brand-note{
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.18);
+  max-width:520px;
+}
+.care-brand-note strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:600;
+  opacity:.72;
+}
+.care-brand-note span{
+  display:block;
+  font-size:9px;
+  line-height:1.65;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.5;
+}
+
+
+/* v0.23 — YOUR CAINTÈ */
+.your-portal{
+  min-height:100svh;
+  background:var(--bone);
+  color:var(--ink);
+  display:flex;
+  align-items:flex-end;
+  padding:0 6vw 8vh;
+}
+.your-portal-inner{
+  width:100%;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:8vw;
+  align-items:end;
+}
+.your-portal h2{
+  margin:20px 0 0;
+  font-size:clamp(78px,12vw,180px);
+  line-height:.78;
+  letter-spacing:-.07em;
+  text-transform:uppercase;
+  font-weight:400;
+}
+.your-portal p{
+  margin:0 0 8px;
+  font-size:clamp(30px,3.6vw,55px);
+  line-height:1.03;
+}
+.your-collection{
+  background:#f2efe9;
+  color:var(--ink);
+  padding:13vh 6vw 11vh;
+}
+.your-section-head{
+  display:grid;
+  grid-template-columns:1fr .72fr;
+  gap:7vw;
+  align-items:end;
+  margin-bottom:7vh;
+}
+.your-section-head h2{
+  margin:18px 0 0;
+  font-size:clamp(58px,8vw,126px);
+  line-height:.84;
+  letter-spacing:-.06em;
+  text-transform:uppercase;
+  font-weight:400;
+}
+.your-section-head p{
+  margin:0;
+  font-size:clamp(24px,2.5vw,38px);
+  line-height:1.1;
+}
+.your-collection-grid{
+  display:grid;
+  grid-template-columns:.88fr 1.12fr;
+  gap:2px;
+  background:rgba(10,10,9,.12);
+  border:1px solid rgba(10,10,9,.12);
+}
+.piece-list{
+  background:#e8e3db;
+  padding:18px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+.piece-card{
+  appearance:none;
+  border:0;
+  background:#f4f1eb;
+  color:inherit;
+  display:grid;
+  grid-template-columns:116px 1fr;
+  gap:18px;
+  align-items:center;
+  padding:12px;
+  text-align:left;
+  cursor:pointer;
+  transition:.25s var(--ease);
+}
+.piece-card:hover,.piece-card.active{background:#fff}
+.piece-card-image{
+  aspect-ratio:1;
+  overflow:hidden;
+  background:#ebe6de;
+}
+.piece-card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  mix-blend-mode:multiply;
+}
+.piece-card-meta span{
+  display:block;
+  font-size:17px;
+  text-transform:uppercase;
+  letter-spacing:-.02em;
+}
+.piece-card-meta small{
+  display:block;
+  margin-top:7px;
+  font-size:8px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  opacity:.5;
+}
+.piece-passport{
+  background:#fff;
+  padding:28px;
+}
+.piece-passport-top{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+}
+.passport-status{
+  padding:8px 11px;
+  border:1px solid rgba(10,10,9,.18);
+  border-radius:999px;
+  font-size:8px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.passport-hero{
+  margin:26px 0 24px;
+  min-height:42vh;
+  background:#eee9e2;
+  overflow:hidden;
+}
+.passport-hero img{
+  width:100%;
+  height:42vh;
+  object-fit:cover;
+  mix-blend-mode:multiply;
+  transition:opacity .25s ease;
+}
+.passport-title{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:18px;
+  padding-bottom:22px;
+  border-bottom:1px solid rgba(10,10,9,.16);
+}
+.passport-title h3{
+  margin:0;
+  font-size:clamp(32px,4vw,60px);
+  line-height:.9;
+  text-transform:uppercase;
+  letter-spacing:-.05em;
+  font-weight:400;
+}
+.passport-title span{
+  font-size:8px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  opacity:.5;
+}
+.passport-data{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.passport-data>div{
+  padding:18px 0;
+  border-bottom:1px solid rgba(10,10,9,.14);
+}
+.passport-data>div:nth-child(odd){padding-right:18px;border-right:1px solid rgba(10,10,9,.14)}
+.passport-data>div:nth-child(even){padding-left:18px}
+.passport-data span{
+  display:block;
+  margin-bottom:7px;
+  font-size:8px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  opacity:.45;
+}
+.passport-data strong{
+  font-size:13px;
+  font-weight:500;
+}
+.passport-actions{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  margin-top:22px;
+  border-top:1px solid rgba(10,10,9,.16);
+  border-left:1px solid rgba(10,10,9,.16);
+}
+.passport-action{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:inherit;
+  border-right:1px solid rgba(10,10,9,.16);
+  border-bottom:1px solid rgba(10,10,9,.16);
+  padding:15px 12px;
+  font:inherit;
+  font-size:8px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  text-align:left;
+  cursor:pointer;
+}
+.passport-action:hover{background:var(--ink);color:var(--bone)}
+.your-protection{
+  background:#0b0b0a;
+  color:var(--bone);
+  padding:13vh 6vw 10vh;
+}
+.your-section-head.light h2,.your-section-head.light p{color:var(--bone)}
+.protection-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.16);
+}
+.protection-card{
+  background:#111110;
+  min-height:62vh;
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+}
+.protection-top{
+  display:flex;
+  justify-content:space-between;
+  font-size:8px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  opacity:.45;
+}
+.protection-card h3{
+  margin:10vh 0 22px;
+  font-size:clamp(42px,5vw,74px);
+  line-height:.88;
+  text-transform:uppercase;
+  letter-spacing:-.055em;
+  font-weight:400;
+}
+.protection-card p{
+  max-width:470px;
+  font-size:14px;
+  line-height:1.55;
+  color:rgba(242,239,233,.65);
+}
+.coverage-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:25px;
+}
+.coverage-tags span{
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;
+  padding:9px 11px;
+  font-size:8px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.return-mini{
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.15);
+}
+.return-mini span{
+  display:block;
+  font-size:8px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  opacity:.4;
+}
+.return-mini strong{
+  display:block;
+  margin-top:7px;
+  font-size:18px;
+  font-weight:400;
+}
+.your-btn{
+  margin-top:auto;
+  width:max-content;
+  appearance:none;
+  border:0;
+  border-bottom:1px solid currentColor;
+  background:transparent;
+  color:inherit;
+  padding:0 0 8px;
+  font:inherit;
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.system-note{
+  margin-top:24px;
+  max-width:760px;
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:22px;
+  align-items:start;
+}
+.system-note strong,.system-note span{
+  font-size:8px;
+  line-height:1.65;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.system-note strong{opacity:.72}.system-note span{opacity:.38}
+.your-account{
+  background:#f1eee8;
+  color:var(--ink);
+  padding:12vh 6vw 11vh;
+}
+.your-section-head.compact{grid-template-columns:1fr;margin-bottom:6vh}
+.account-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(10,10,9,.18);
+  border-left:1px solid rgba(10,10,9,.18);
+}
+.account-card{
+  min-height:54vh;
+  padding:26px;
+  border-right:1px solid rgba(10,10,9,.18);
+  border-bottom:1px solid rgba(10,10,9,.18);
+  display:flex;
+  flex-direction:column;
+}
+.account-num{
+  font-size:8px;
+  letter-spacing:.15em;
+  opacity:.45;
+}
+.account-card h3{
+  margin:8vh 0 34px;
+  font-size:clamp(32px,3.4vw,54px);
+  line-height:.9;
+  text-transform:uppercase;
+  letter-spacing:-.045em;
+  font-weight:400;
+}
+.size-row{
+  display:flex;
+  justify-content:space-between;
+  padding:14px 0;
+  border-top:1px solid rgba(10,10,9,.14);
+}
+.size-row:last-of-type{border-bottom:1px solid rgba(10,10,9,.14)}
+.size-row span{
+  font-size:9px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  opacity:.5;
+}
+.size-row strong{font-size:18px;font-weight:400}
+.text-action{
+  margin-top:auto;
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  font-size:8px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  text-align:left;
+  cursor:pointer;
+  width:max-content;
+  border-bottom:1px solid currentColor;
+  padding-bottom:7px;
+}
+.reward-tier{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  padding-bottom:18px;
+}
+.reward-tier span{
+  font-size:8px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  opacity:.48;
+}
+.reward-tier strong{
+  font-size:30px;
+  text-transform:uppercase;
+  font-weight:400;
+}
+.tier-track{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+}
+.tier-track span{
+  height:4px;
+  background:rgba(10,10,9,.12);
+}
+.tier-track .tier-active{background:var(--ink)}
+.tier-labels{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:8px;
+}
+.tier-labels span{
+  font-size:7px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.45;
+}
+.tier-labels span:nth-child(2){text-align:center}
+.tier-labels span:last-child{text-align:right}
+.rewards-note{
+  margin-top:auto;
+  padding-top:20px;
+}
+.rewards-note span{
+  font-size:8px;
+  line-height:1.6;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  opacity:.42;
+}
+.support-links{
+  border-top:1px solid rgba(10,10,9,.14);
+}
+.support-links button{
+  width:100%;
+  appearance:none;
+  border:0;
+  border-bottom:1px solid rgba(10,10,9,.14);
+  background:transparent;
+  color:inherit;
+  padding:14px 0;
+  text-align:left;
+  font:inherit;
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.support-links button:hover{padding-left:8px}
+.your-close{
+  min-height:58svh;
+  background:#e2ddd5;
+  color:var(--ink);
+  padding:10vh 6vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.your-close-line{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid rgba(10,10,9,.18);
+}
+.your-close-line span{
+  padding:26px 0;
+  border-right:1px solid rgba(10,10,9,.18);
+  font-size:clamp(28px,4vw,62px);
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+.your-close-line span:last-child{border-right:0;text-align:right}
+.claim-overlay{
+  position:fixed;
+  inset:0;
+  z-index:200;
+  background:rgba(0,0,0,.56);
+  display:flex;
+  justify-content:flex-end;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s ease;
+}
+.claim-overlay.open{opacity:1;pointer-events:auto}
+.claim-panel{
+  position:relative;
+  width:min(560px,100%);
+  height:100%;
+  background:#f2efe9;
+  color:var(--ink);
+  padding:9vh 42px 40px;
+  overflow:auto;
+  transform:translateX(100%);
+  transition:.4s var(--ease);
+}
+.claim-overlay.open .claim-panel{transform:translateX(0)}
+.claim-close{
+  position:absolute;
+  top:22px;
+  right:24px;
+  border:0;
+  background:transparent;
+  font-size:30px;
+  cursor:pointer;
+}
+.claim-panel h3{
+  margin:30px 0 36px;
+  font-size:clamp(42px,5vw,68px);
+  line-height:.9;
+  text-transform:uppercase;
+  letter-spacing:-.05em;
+  font-weight:400;
+}
+.claim-piece{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:15px 0;
+  border-top:1px solid rgba(10,10,9,.18);
+  border-bottom:1px solid rgba(10,10,9,.18);
+}
+.claim-piece span{
+  font-size:8px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  opacity:.45;
+}
+.claim-piece strong{font-size:14px;font-weight:500}
+.claim-issues{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin:24px 0;
+}
+.claim-issues button{
+  appearance:none;
+  border:1px solid rgba(10,10,9,.18);
+  background:transparent;
+  color:inherit;
+  padding:14px;
+  text-align:left;
+  font:inherit;
+  font-size:9px;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.claim-issues button.active{background:var(--ink);color:var(--bone)}
+.claim-upload{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-top:1px solid rgba(10,10,9,.18);
+  border-bottom:1px solid rgba(10,10,9,.18);
+  padding:16px 0;
+  cursor:pointer;
+}
+.claim-upload span{
+  font-size:9px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.claim-upload input{max-width:180px;font-size:10px}
+.claim-submit{
+  margin-top:28px;
+  width:100%;
+  border:0;
+  background:var(--ink);
+  color:var(--bone);
+  padding:16px;
+  font:inherit;
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.claim-panel>p{
+  margin-top:18px;
+  font-size:8px;
+  line-height:1.6;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  opacity:.42;
+}
+@media(max-width:820px){
+  .your-portal{padding:0 20px 7vh}
+  .your-portal-inner,.your-section-head,.your-collection-grid,.protection-grid,.account-grid{grid-template-columns:1fr}
+  .your-portal h2{font-size:clamp(72px,22vw,118px)}
+  .your-collection,.your-protection,.your-account{padding-left:20px;padding-right:20px}
+  .piece-card{grid-template-columns:92px 1fr}
+  .passport-data{grid-template-columns:1fr}
+  .passport-data>div:nth-child(odd){border-right:0;padding-right:0}
+  .passport-data>div:nth-child(even){padding-left:0}
+  .passport-actions{grid-template-columns:1fr 1fr}
+  .system-note{grid-template-columns:1fr}
+  .account-card{min-height:42vh}
+  .your-close{padding-left:20px;padding-right:20px}
+  .your-close-line{grid-template-columns:1fr 1fr}
+  .your-close-line span:nth-child(2){border-right:0}
+  .your-close-line span:last-child{text-align:left}
+  .claim-panel{padding-left:20px;padding-right:20px}
+}
+
+
+/* v0.24 — Your CAINTÈ review refinements */
+.your-asset-note{
+  margin:28px 6vw 0;
+  padding-top:18px;
+  border-top:1px solid rgba(10,10,9,.12);
+  max-width:620px;
+}
+.your-asset-note strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:600;
+  opacity:.66;
+}
+.your-asset-note span,
+.passport-brand-note span{
+  display:block;
+  font-size:9px;
+  line-height:1.65;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  opacity:.46;
+}
+.passport-brand-note{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:1px solid rgba(10,10,9,.10);
+}
+.support-target{
+  animation:supportTarget 1.1s ease;
+}
+@keyframes supportTarget{
+  0%,100%{box-shadow:none}
+  30%{box-shadow:0 0 0 2px rgba(10,10,9,.18)}
+}
+
+
+/* v0.25 — functional account utilities */
+.utility-overlay{
+  position:fixed; inset:0; z-index:120;
+  background:rgba(5,5,5,.42);
+  opacity:0; pointer-events:none;
+  transition:opacity .28s ease;
+  display:flex; justify-content:flex-end;
+}
+.utility-overlay.open{opacity:1;pointer-events:auto}
+.utility-panel{
+  position:relative;
+  width:min(520px,100%); min-height:100%;
+  background:var(--bone); color:var(--ink);
+  padding:8vh 42px 42px;
+  transform:translateX(100%);
+  transition:transform .42s var(--ease);
+  overflow:auto;
+}
+.utility-overlay.open .utility-panel{transform:translateX(0)}
+.utility-close{
+  position:absolute;top:22px;right:24px;
+  appearance:none;border:0;background:transparent;
+  font-size:28px;line-height:1;cursor:pointer;color:var(--ink);
+}
+.utility-panel h3{
+  margin:18px 0 12px;
+  font-size:clamp(42px,5vw,68px);
+  line-height:.94;letter-spacing:-.05em;text-transform:uppercase;font-weight:400;
+}
+.utility-panel>p{
+  max-width:390px;margin:0 0 34px;
+  font-family:Georgia,serif;font-size:19px;line-height:1.28;
+}
+.utility-fields{display:grid;gap:18px;margin:28px 0}
+.utility-fields label{
+  display:grid;grid-template-columns:1fr 150px;align-items:center;gap:20px;
+  padding-bottom:14px;border-bottom:1px solid rgba(10,10,9,.14);
+}
+.utility-fields label>span,.contact-address>span{
+  font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.55;
+}
+.utility-fields input,.utility-fields select{
+  width:100%;appearance:none;border:0;border-bottom:1px solid rgba(10,10,9,.34);
+  background:transparent;padding:8px 2px;font:inherit;color:inherit;outline:none;text-align:right;
+}
+.utility-primary,.utility-secondary{
+  appearance:none;display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;padding:0 18px;border:1px solid var(--ink);
+  text-decoration:none;cursor:pointer;font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+}
+.utility-primary{background:var(--ink);color:var(--bone)}
+.utility-secondary{background:transparent;color:var(--ink)}
+.utility-confirm{
+  min-height:20px;margin-top:14px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.58;
+}
+.contact-address{
+  padding:18px 0;border-top:1px solid rgba(10,10,9,.14);border-bottom:1px solid rgba(10,10,9,.14);
+  display:flex;justify-content:space-between;align-items:center;gap:18px;
+}
+.contact-address strong{font-size:18px;font-weight:400}
+.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+@media(max-width:760px){
+  .utility-panel{padding:9vh 20px 28px}
+  .utility-fields label{grid-template-columns:1fr 110px}
+}
+
+
+/* v0.27 — final polish */
+.footer-note{max-width:420px;line-height:1.55}
+.passport-brand-note,.your-asset-note,.ring-asset-note,.care-brand-note{letter-spacing:0}
+@media(max-width:820px){
+  .passport-actions{gap:8px}
+  .passport-action{min-height:40px;display:inline-flex;align-items:center}
+}
+
+
+/* v0.27 — final refinement pass */
+.mathias-photo-placeholder{
+  min-height:52vh !important;
+  width:min(78%,520px);
+  margin:auto;
+}
+.statement{
+  min-height:78svh !important;
+  padding-top:10vh !important;
+  padding-bottom:10vh !important;
+}
+
+/* Brand-supplied imagery placeholders */
+.asset-visual{
+  width:100%;
+  height:100%;
+  min-height:inherit;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:28px;
+  background:
+    radial-gradient(circle at 72% 28%,rgba(255,255,255,.08),transparent 24%),
+    linear-gradient(145deg,#181816,#080808 72%);
+  color:var(--bone);
+  border:1px solid rgba(255,255,255,.08);
+}
+.asset-visual.light{
+  background:
+    radial-gradient(circle at 72% 28%,rgba(255,255,255,.72),transparent 26%),
+    linear-gradient(145deg,#ded9d1,#aaa197 76%);
+  color:var(--ink);
+  border-color:rgba(10,10,9,.10);
+}
+.asset-kicker{
+  font-size:8px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.58;
+}
+.asset-name{
+  font-size:clamp(34px,4.6vw,72px);
+  line-height:.9;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+  font-weight:400;
+}
+.asset-note{
+  font-size:8px;
+  line-height:1.55;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  opacity:.48;
+  max-width:330px;
+}
+.design-process-visuals .macro .asset-visual{position:absolute;inset:0}
+.design-process-visuals .macro-label{z-index:3}
+.std-piece .asset-visual{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+.std-piece::after{z-index:1}
+.std-piece-data{z-index:2}
+.std-care-visual .asset-visual{
+  width:80%;
+  height:80%;
+  min-height:60vh;
+}
+
+/* Drop archive CTA */
+.drop-links{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  margin-top:24px;
+}
+.drop-links a{
+  border:1px solid rgba(255,255,255,.28);
+  padding:9px 12px;
+  font-size:8px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:inherit;
+}
+.drop-links a:hover{background:var(--bone);color:var(--ink)}
+
+/* Clearer Style by Moment interaction */
+.moment{cursor:pointer}
+.moment.active .moment-bg{opacity:.55;transform:scale(1)}
+.moment.active::after{opacity:1}
+.moment.active .moment-name{font-family:Georgia,serif;font-style:italic}
+.moments-instruction{
+  margin-top:18px;
+  font-size:8px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  opacity:.45;
+}
+
+@media(max-width:820px){
+  .mathias-photo-placeholder{width:88%;min-height:48vh !important}
+  .statement{min-height:68svh !important}
+  .drop-links{justify-content:flex-start}
+  .std-care-visual .asset-visual{width:88%;height:72%;min-height:56vh}
+}
+
+</style>
+</head>
+<body class="lock">
+<div class="intro" id="intro"><div class="intro-logo">CAINTÈ</div></div><div class="grain"></div>
+<header class="topbar"><div class="brand">CAINTÈ</div><nav class="nav"><a href="https://cainte.com/" rel="noopener">Shop</a><a class="active" href="#hero">The World</a><a href="#inside">Inside</a><a href="#standard-trailer">Standard</a><a href="#edit">Edit</a><a href="#your">Your</a></nav><div class="top-actions"><div class="world-index" id="worldIndex">THE WORLD / 00</div><div aria-label="Language selector" class="lang-switch"><button class="lang-btn active" data-lang="en" type="button">EN</button><span class="lang-sep">/</span><button class="lang-btn" data-lang="it" type="button">IT</button></div></div></header>
+<main>
+<section class="hero" data-label="THE WORLD / 00" id="hero"><div class="hero-media"></div><div class="hero-content"><div><div class="eyebrow">CAINTÈ / COPENHAGEN</div><h1 class="display"><span>The World</span><span>of CAINTÈ</span></h1></div><div class="hero-side"><p class="hero-tagline serif">Beyond the piece.</p><a class="cta" href="#bridge">Enter the world ↓</a></div></div></section>
+<section class="bridge" data-label="THE WORLD / 00" id="bridge"><div class="bridge-sticky"><div class="bridge-lines"><div class="bridge-word">From idea.</div><div class="bridge-word">To piece.</div><div class="bridge-word">To style.</div><div class="bridge-word">To yours.</div><div class="bridge-sub">Four perspectives. One world.</div></div></div></section>
+<section class="portal" data-label="INSIDE / 01" id="inside"><div class="portal-media"></div><div class="portal-content"><div><div class="eyebrow">01 / 04</div><h2 class="portal-title">Inside<br/>CAINTÈ</h2></div><div class="portal-side"><p class="serif">The people. The place. The idea.</p><a class="cta" href="#copenhagen">Discover what exists before the piece ↓</a></div></div></section>
+<div class="chapter">
+<section class="scene cph" data-label="INSIDE / ORIGIN" id="copenhagen"><div class="cph-left"><div><div class="label">The Origin / 01</div><h2 class="scene-head" style="margin-top:25px">Copenhagen.</h2><p class="scene-copy serif">Where the CAINTÈ story begins.</p></div><div><div class="cph-year">2021</div><div class="tiny" style="margin-top:28px">CAINTÈ was established in Copenhagen in 2021.</div></div></div><div class="cph-right"><div class="brand-photo-placeholder cph-photo-placeholder"><div class="placeholder-label">PHOTO OF COPENHAGEN</div><div class="placeholder-note">Selected by CAINTÈ</div></div></div></section>
+<section class="origin" data-label="INSIDE / STORY"><div class="origin-sticky"><div class="origin-text"><div class="label">The Origin / 02</div><h2><span data-en="A personal idea." data-it="Un’idea personale.">A personal idea.</span><br/><span data-en="Made real." data-it="Diventata reale.">Made real.</span></h2><p>CAINTÈ began with the courage to turn a personal idea into something real. After years of wearing jewelry, Mathias had developed a clear vision of the pieces he wanted to wear: designs that could become a natural part of personal style. From that vision came CAINTÈ, with attention to shape, design, length, size and material down to the smallest detail.</p><div class="thoughts"><div class="thought">“Is it something for me?”</div><div class="thought">“Is it too feminine?”</div><div class="thought">“Can I wear it?”</div></div></div><div class="origin-object"><div class="brand-photo-placeholder mathias-photo-placeholder"><div class="placeholder-label">PHOTO OF MATHIAS</div><div class="placeholder-note">If approved by CAINTÈ</div></div></div></div></section>
+<section class="statement"><h2 class="reveal"><span data-en="A vision" data-it="Una visione">A vision</span><br/><span data-en="became CAINTÈ." data-it="è diventata CAINTÈ.">became CAINTÈ.</span><span class="serif">CAINTÈ / Copenhagen / 2021</span></h2></section>
+<section class="expression" data-label="INSIDE / EXPRESSION"><div class="expression-media"></div><div class="expression-copy"><div class="label">Point of View / 03</div><h2 class="scene-head" style="margin-top:24px">Jewelry as<br/>self-expression.</h2><p class="scene-copy serif">Not an accessory added at the end. A detail that becomes part of how you show up.</p><div class="expression-tags"><span class="tag">Minimal</span><span class="tag">Bold</span><span class="tag">Gold</span><span class="tag">Silver</span><span class="tag">Everyday</span></div></div></section>
+<section class="danish" data-label="INSIDE / DANISH"><div class="danish-top"><div class="danish-big reveal">Danish<br/>by Origin.</div><div><div class="label">Design identity / 04</div><p class="danish-q serif reveal"
+data-en="Founded in Copenhagen in 2021. Danish by Origin begins with a real place: the city where CAINTÈ was established and from which the brand frames its identity. The final story can be completed with CAINTÈ's own studio, locations and visual references."
+data-it="Fondata a Copenaghen nel 2021. Danish by Origin parte da un luogo reale: la città in cui CAINTÈ è nata e da cui il brand costruisce la propria identità. Il racconto definitivo può essere completato con studio, luoghi e riferimenti visivi scelti da CAINTÈ.">Founded in Copenhagen in 2021. Danish by Origin begins with a real place: the city where CAINTÈ was established and from which the brand frames its identity. The final story can be completed with CAINTÈ's own studio, locations and visual references.</p></div></div><div class="principles"><div class="principle"><div class="principle-num">01</div><div class="principle-word">Form</div></div><div class="principle"><div class="principle-num">02</div><div class="principle-word">Balance</div></div><div class="principle"><div class="principle-num">03</div><div class="principle-word">Function</div></div><div class="principle"><div class="principle-num">04</div><div class="principle-word">Longevity</div></div></div></section>
+<section class="design-process" data-label="INSIDE / DESIGN" id="design-process">
+<div class="design-process-intro">
+<div>
+<div class="label">Design &amp; Process / 05</div>
+<h2 class="scene-head" style="margin-top:24px">A language<br/>of form.</h2>
+</div>
+<p class="design-process-lead serif">Line, surface, proportion and detail shape the character of a CAINTÈ piece. From the first idea to the final object, every decision becomes part of the design.</p>
+</div>
+<div class="design-process-visuals">
+<div aria-label="Original Necklace product image placeholder" class="macro" role="img">
+  <div class="asset-visual">
+    <span class="asset-kicker" data-en="PRODUCT-ONLY PHOTOGRAPHY" data-it="FOTOGRAFIA DEL SOLO PRODOTTO">PRODUCT-ONLY PHOTOGRAPHY</span>
+    <strong class="asset-name">Original<br>Necklace</strong>
+    <span class="asset-note" data-en="Final macro image supplied or approved by CAINTÈ." data-it="Immagine macro definitiva fornita o approvata da CAINTÈ.">Final macro image supplied or approved by CAINTÈ.</span>
+  </div>
+  <div class="macro-label"><strong>Line</strong><span data-en="Shape / rhythm / repetition" data-it="Forma / ritmo / ripetizione">Shape / rhythm / repetition</span></div>
+</div>
+<div aria-label="Essence Ring product image placeholder" class="macro" role="img">
+  <div class="asset-visual">
+    <span class="asset-kicker" data-en="PRODUCT-ONLY PHOTOGRAPHY" data-it="FOTOGRAFIA DEL SOLO PRODOTTO">PRODUCT-ONLY PHOTOGRAPHY</span>
+    <strong class="asset-name">Essence<br>Ring</strong>
+    <span class="asset-note" data-en="Final macro image supplied or approved by CAINTÈ." data-it="Immagine macro definitiva fornita o approvata da CAINTÈ.">Final macro image supplied or approved by CAINTÈ.</span>
+  </div>
+  <div class="macro-label"><strong>Surface</strong><span data-en="Finish / reflection / restraint" data-it="Finitura / riflesso / essenzialità">Finish / reflection / restraint</span></div>
+</div>
+</div>
+<div class="process-band">
+<div class="process-band-head">
+<div class="label">From idea to piece</div>
+<p>CAINTÈ's real studio process would live here through sketches, prototypes, material choices and working imagery selected by the brand.</p>
+</div>
+<div class="process-flow">
+<div class="flow-step"><span>01</span><strong>Idea</strong><small>Reference / intention</small></div>
+<div class="flow-step"><span>02</span><strong>Design</strong><small>Form / proportion</small></div>
+<div class="flow-step"><span>03</span><strong>Develop</strong><small>Test / refine</small></div>
+<div class="flow-step"><span>04</span><strong>Material</strong><small>Finish / feel</small></div>
+<div class="flow-step"><span>05</span><strong>Refine</strong><small>Detail / resolve</small></div>
+<div class="flow-step"><span>06</span><strong>Piece</strong><small>Final object</small></div>
+</div>
+</div>
+</section>
+
+<section class="people people-v04" data-label="INSIDE / PEOPLE" id="people">
+<div class="people-v04-head">
+<div class="label">The people / 06</div>
+<h2 class="scene-head" style="margin-top:24px">Behind<br/>CAINTÈ.</h2>
+<p class="people-quote serif">A brand is shaped by the people behind every idea, piece, image and decision.</p>
+</div>
+<div class="people-v04-grid">
+<div class="team-card team-card-featured">
+<div class="brand-photo-placeholder"><div class="placeholder-label">PHOTO OF MATHIAS</div><div class="placeholder-note">Selected by CAINTÈ</div></div>
+<div class="team-meta"><strong>Mathias</strong><span>Founder / CEO</span></div>
+</div>
+<div class="team-card">
+<div class="brand-photo-placeholder"><div class="placeholder-label">TEAM PORTRAIT</div><div class="placeholder-note">Photo selected by CAINTÈ</div></div>
+<div class="team-meta"><strong>The team</strong><span>Names and roles selected by CAINTÈ</span></div>
+</div>
+<div class="team-card">
+<div class="brand-photo-placeholder"><div class="placeholder-label">THE STUDIO</div><div class="placeholder-note">Working imagery selected by CAINTÈ</div></div>
+<div class="team-meta"><strong>Behind the work</strong><span>Design / campaign / product</span></div>
+</div>
+</div>
+</section>
+<section class="collection" data-label="INSIDE / STORIES" id="collection-story"><div class="collection-bg"></div><div class="collection-content"><div class="collection-copy"><div class="label">Collection Stories / 07</div><h2 class="scene-head" style="margin-top:24px">Behind<br/>the drop.</h2><p>Every drop has a setting, a mood and a point of view. Collection Stories gives each campaign room to be experienced before returning to the pieces.</p><a class="cta" href="https://cainte.com/collections/drop-001" rel="noopener" data-en="Explore the drops ↗" data-it="Esplora i drop ↗">Explore the drops ↗</a></div><div class="collection-side">
+  <div class="big">001—004</div>
+  <div class="sub" data-en="Drop archive / campaign stories" data-it="Archivio drop / storie delle campagne">Drop archive / campaign stories</div>
+  <div class="drop-links">
+    <a href="https://cainte.com/collections/drop-001" rel="noopener">Drop 001</a>
+    <a href="https://cainte.com/collections/drop-002" rel="noopener">Drop 002</a>
+    <a href="https://cainte.com/collections/drop-003" rel="noopener">Drop 003</a>
+    <a href="https://cainte.com/collections/drop-004" rel="noopener">Drop 004</a>
+  </div>
+</div></div></section>
+</div>
+<section class="to-standard" data-label="STANDARD / 02" id="standard"><div class="to-standard-inner"><div class="label">Next / 02</div><h2 class="reveal">An idea<br/>becomes a piece.</h2><p class="serif reveal">But what makes the piece endure?</p><a class="cta reveal" href="#standard-trailer">Enter The Standard ↓</a></div></section>
+
+<section class="standard-portal" data-label="STANDARD / 02" id="standard-trailer">
+  <div class="standard-portal-media"></div>
+  <div class="standard-portal-content">
+    <div><div class="eyebrow">02 / 04</div><h2 class="standard-portal-title">The CAINTÈ<br/>Standard</h2></div>
+    <div class="standard-portal-side"><p class="serif" data-en="The details behind the piece." data-it="I dettagli dietro il gioiello.">The details behind the piece.</p><a class="cta" href="#standard-identity" data-en="Know your piece ↓" data-it="Conosci il tuo gioiello ↓">Know your piece ↓</a></div>
+  </div>
+</section>
+<div class="standard-chapter">
+<section class="std-identity" data-label="STANDARD / PIECE" id="standard-identity">
+  <div class="std-identity-copy">
+    <div class="label" data-en="Know your piece / 01" data-it="Conosci il tuo gioiello / 01">Know your piece / 01</div>
+    <h2 data-en="One piece. All its details." data-it="Un gioiello. Tutti i suoi dettagli.">One piece. All its details.</h2>
+    <p class="serif" data-en="This module can adapt to any CAINTÈ piece, bringing material, finish, origin and protection into one clear view. Original Necklace is used here only as the prototype example." data-it="Questo modulo può adattarsi a qualsiasi gioiello CAINTÈ, riunendo materiale, finitura, origine e protezione in una sola vista. Original Necklace è usata qui solo come esempio del prototipo.">This module can adapt to any CAINTÈ piece, bringing material, finish, origin and protection into one clear view. Original Necklace is used here only as the prototype example.</p>
+  </div>
+  <div class="std-piece">
+    <div class="asset-visual">
+      <span class="asset-kicker" data-en="SELECTED PIECE / PRODUCT-ONLY PHOTO" data-it="GIOIELLO SELEZIONATO / FOTO SOLO PRODOTTO">SELECTED PIECE / PRODUCT-ONLY PHOTO</span>
+      <strong class="asset-name">Original<br>Necklace</strong>
+      <span class="asset-note" data-en="Prototype example. Final selected-piece photography supplied by CAINTÈ." data-it="Esempio del prototipo. Fotografia definitiva del gioiello selezionato fornita da CAINTÈ.">Prototype example. Final selected-piece photography supplied by CAINTÈ.</span>
+    </div>
+    <div class="std-piece-data">
+      <div class="std-data"><small data-en="Material" data-it="Materiale">Material</small><strong>316 Stainless Steel</strong></div>
+      <div class="std-data"><small data-en="Finish" data-it="Finitura">Finish</small><strong data-en="Silver / 14K Gold PVD" data-it="Silver / PVD Oro 14K">Silver / 14K Gold PVD</strong></div>
+      <div class="std-data"><small data-en="Designed" data-it="Progettato">Designed</small><strong>Copenhagen</strong></div>
+      <div class="std-data"><small data-en="Protection" data-it="Protezione">Protection</small><strong data-en="Lifetime Guarantee" data-it="Garanzia a vita">Lifetime Guarantee</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="std-material" data-label="STANDARD / MATERIAL">
+  <div class="std-material-number">316</div>
+  <div class="std-material-inner">
+    <div><div class="label" data-en="The material / 02" data-it="Il materiale / 02">The material / 02</div><h2 class="std-material-title" data-en="Starts with steel." data-it="Tutto parte dall'acciaio.">Starts with steel.</h2></div>
+    <div class="std-material-copy">
+      <p class="serif" data-en="CAINTÈ jewelry is built around 316 stainless steel: selected for strength, everyday wear and a clean surface that carries the finish." data-it="I gioielli CAINTÈ nascono attorno all'acciaio inossidabile 316: scelto per resistenza, uso quotidiano e per una superficie pulita capace di accogliere la finitura.">CAINTÈ jewelry is built around 316 stainless steel: selected for strength, everyday wear and a clean surface that carries the finish.</p>
+      <div class="std-benefits">
+        <div class="std-benefit" data-en="Waterproof" data-it="Waterproof">Waterproof</div>
+        <div class="std-benefit" data-en="Heat & sweat resistant" data-it="Resistente a calore e sudore">Heat & sweat resistant</div>
+        <div class="std-benefit" data-en="Hypoallergenic" data-it="Ipoallergenico">Hypoallergenic</div>
+        <div class="std-benefit" data-en="Made for everyday wear" data-it="Pensato per l'uso quotidiano">Made for everyday wear</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="std-pvd" data-label="STANDARD / FINISH">
+  <div class="std-pvd-visual">
+    <div class="material-stack" aria-hidden="true">
+      <div class="material-slab slab-steel"><span>01</span><b data-en="Stainless Steel" data-it="Acciaio inossidabile">Stainless Steel</b></div>
+      <div class="material-slab slab-pvd"><span>02</span><b>PVD</b></div>
+      <div class="material-slab slab-gold"><span>03</span><b data-en="14K Gold Finish" data-it="Finitura Oro 14K">14K Gold Finish</b></div>
+    </div>
+    <div class="material-stack-note" data-en="Base → bond → finish" data-it="Base → legame → finitura">Base → bond → finish</div>
+  </div>
+  <div class="std-pvd-copy">
+    <div class="label" data-en="The finish / 03" data-it="La finitura / 03">The finish / 03</div>
+    <h2 data-en="More than a colour." data-it="Più di un colore.">More than a colour.</h2>
+    <p class="serif" data-en="For gold finishes, CAINTÈ uses Physical Vapor Deposition — PVD — to bond the finish to the steel surface and create a coating designed for everyday wear." data-it="Per le finiture oro, CAINTÈ utilizza il Physical Vapor Deposition — PVD — per legare la finitura alla superficie in acciaio e creare un rivestimento pensato per l'uso quotidiano.">For gold finishes, CAINTÈ uses Physical Vapor Deposition — PVD — to bond the finish to the steel surface and create a coating designed for everyday wear.</p>
+    <div class="std-pvd-steps">
+      <div class="std-pvd-step"><span>01</span><strong>Stainless Steel</strong></div>
+      <div class="std-pvd-step"><span>02</span><strong>Physical Vapor Deposition</strong></div>
+      <div class="std-pvd-step"><span>03</span><strong data-en="14K Gold Finish" data-it="Finitura Oro 14K">14K Gold Finish</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="std-everyday" data-label="STANDARD / EVERYDAY">
+  <div class="std-everyday-head"><div><div class="label" data-en="Built for everyday / 04" data-it="Pensato per ogni giorno / 04">Built for everyday / 04</div><h2 data-en="Made to move with you." data-it="Fatto per muoversi con te.">Made to move with you.</h2></div><p class="serif" data-en="Designed for the moments that make up every day." data-it="Pensato per i momenti che compongono ogni giorno.">Designed for the moments that make up every day.</p></div>
+  <div class="std-life-grid">
+    <div class="std-life water"><div class="std-life-num">01</div><div class="std-life-word" data-en="Water" data-it="Acqua">Water</div><small data-en="Sea / pool / shower" data-it="Mare / piscina / doccia">Sea / pool / shower</small></div>
+    <div class="std-life heat"><div class="std-life-num">02</div><div class="std-life-word" data-en="Heat" data-it="Calore">Heat</div><small data-en="Made for warm days" data-it="Pensato per le giornate calde">Made for warm days</small></div>
+    <div class="std-life sweat"><div class="std-life-num">03</div><div class="std-life-word" data-en="Sweat" data-it="Sudore">Sweat</div><small data-en="Wear it through movement" data-it="Indossalo mentre ti muovi">Wear it through movement</small></div>
+    <div class="std-life everyday"><div class="std-life-num">04</div><div class="std-life-word" data-en="Everyday" data-it="Ogni giorno">Everyday</div><small data-en="Wear it. Keep wearing it." data-it="Indossalo. Continua a indossarlo.">Wear it. Keep wearing it.</small></div>
+  </div>
+</section>
+
+
+
+<section class="std-guarantee" data-label="STANDARD / GUARANTEE">
+  <div class="std-guarantee-head"><div><div class="label" data-en="Lifetime Guarantee / 05" data-it="Lifetime Guarantee / 05">Lifetime Guarantee / 05</div><h2 data-en="Made to stay with you." data-it="Pensata per accompagnarti nel tempo.">Made to stay with you.</h2></div><p class="serif" data-en="The Lifetime Guarantee brings the essentials of protection together in one simple view." data-it="La Lifetime Guarantee riunisce in una vista semplice le informazioni essenziali sulla protezione del gioiello.">The Lifetime Guarantee brings the essentials of protection together in one simple view.</p></div>
+  <div class="std-guarantee-grid">
+    <div class="std-cover"><div class="std-cover-title" data-en="Covered" data-it="Coperto">Covered</div><div class="std-cover-list"><div class="std-cover-row"><span data-en="Tarnishing" data-it="Ossidazione">Tarnishing</span><span>✓</span></div><div class="std-cover-row"><span data-en="Fading" data-it="Scolorimento">Fading</span><span>✓</span></div><div class="std-cover-row"><span data-en="Accidental breakage" data-it="Rottura accidentale">Accidental breakage</span><span>✓</span></div></div></div>
+    <div class="std-cover"><div class="std-cover-title" data-en="Not covered" data-it="Non coperto">Not covered</div><div class="std-cover-list"><div class="std-cover-row"><span data-en="Lost or stolen" data-it="Perso o rubato">Lost or stolen</span><span>—</span></div><div class="std-cover-row"><span data-en="Scratches" data-it="Graffi">Scratches</span><span>—</span></div><div class="std-cover-row"><span data-en="Intentional / third-party damage" data-it="Danno intenzionale / da terzi">Intentional / third-party damage</span><span>—</span></div></div></div>
+  </div>
+  <div class="std-guarantee-action">
+    <div>
+      <small data-en="WHEN YOU NEED SUPPORT" data-it="QUANDO HAI BISOGNO DI ASSISTENZA">WHEN YOU NEED SUPPORT</small>
+      <strong data-en="Your guarantee follows your piece into Your CAINTÈ." data-it="La garanzia segue il tuo gioiello dentro Your CAINTÈ.">Your guarantee follows your piece into Your CAINTÈ.</strong>
+    </div>
+    <a class="cta dark-cta" href="#your" data-en="Manage in Your CAINTÈ →" data-it="Gestisci in Your CAINTÈ →">Manage in Your CAINTÈ →</a>
+  </div>
+</section>
+
+<section class="std-care" data-label="STANDARD / CARE" id="standard-care">
+  <div class="std-care-copy"><div class="label" data-en="Care / 06" data-it="Cura / 06">Care / 06</div><h2 data-en="Wear it. Care for it. Keep it." data-it="Indossalo. Prenditene cura. Tienilo con te.">Wear it. Care for it. Keep it.</h2><p class="serif" data-en="Care does not need to make jewelry feel fragile. It can simply help every piece stay part of everyday life for longer." data-it="La cura non deve far sembrare un gioiello fragile. Può semplicemente aiutare ogni pezzo a restare parte della vita quotidiana più a lungo.">Care does not need to make jewelry feel fragile. It can simply help every piece stay part of everyday life for longer.</p><div class="std-care-tags"><span class="std-care-tag" data-en="Clean" data-it="Pulisci">Clean</span><span class="std-care-tag" data-en="Store" data-it="Conserva">Store</span><span class="std-care-tag" data-en="Travel" data-it="Viaggia">Travel</span></div>
+    <div class="care-brand-note">
+      <strong data-en="CARE GUIDELINES" data-it="LINEE GUIDA DI CURA">CARE GUIDELINES</strong>
+      <span data-en="Final cleaning, storage and travel instructions to be supplied or approved by CAINTÈ."
+            data-it="Le istruzioni definitive per pulizia, conservazione e viaggio saranno fornite o approvate da CAINTÈ.">
+        Final cleaning, storage and travel instructions to be supplied or approved by CAINTÈ.
+      </span>
+    </div></div>
+  <div class="std-care-visual">
+    <div class="asset-visual light">
+      <span class="asset-kicker" data-en="CARE / PRODUCT DETAIL" data-it="CURA / DETTAGLIO PRODOTTO">CARE / PRODUCT DETAIL</span>
+      <strong class="asset-name" data-en="Care<br>imagery." data-it="Immagine<br>di cura.">Care<br>imagery.</strong>
+      <span class="asset-note" data-en="Product-detail or care still-life selected by CAINTÈ to match the approved care instructions." data-it="Dettaglio prodotto o still-life di cura scelto da CAINTÈ in coerenza con le istruzioni approvate.">Product-detail or care still-life selected by CAINTÈ to match the approved care instructions.</span>
+    </div>
+  </div>
+</section>
+
+<section class="std-to-edit" data-label="THE EDIT / 03" id="standard-to-edit"><div class="std-to-edit-inner"><div class="label" data-en="Next / 03" data-it="Avanti / 03">Next / 03</div><h2 data-en="Built to endure." data-it="Pensato per durare.">Built to endure.</h2><p class="serif" data-en="Made to be worn." data-it="Fatto per essere indossato.">Made to be worn.</p><a class="cta" href="#edit" data-en="Enter The Edit ↓" data-it="Entra in The Edit ↓">Enter The Edit ↓</a></div></section>
+</div>
+
+<div class="edit-world">
+<section class="edit-portal" data-label="THE EDIT / 03" id="edit">
+  <div class="edit-portal-media"></div>
+  <div class="edit-portal-content">
+    <div><div class="eyebrow">03 / 04</div><h2 class="edit-portal-title">The Edit</h2></div>
+    <div class="edit-portal-side"><p class="serif" data-en="Not just what you wear. How you wear it." data-it="Non solo ciò che indossi. Il modo in cui lo rendi tuo.">Not just what you wear. How you wear it.</p></div>
+  </div>
+</section>
+
+<section class="edit-energy" data-label="THE EDIT / ENERGY" id="edit-energy">
+  <div class="edit-energy-head">
+    <div><div class="label" data-en="The Edit / 01 — Styling" data-it="The Edit / 01 — Styling">The Edit / 01 — Styling</div><h2 data-en="Same piece. Different energy." data-it="Stesso gioiello. Un'energia diversa.">Same piece. Different energy.</h2></div>
+    <p class="serif" data-en="A piece can stay the same while the way you wear it changes everything." data-it="Il gioiello può restare lo stesso. È il modo in cui lo indossi a cambiare tutto.">A piece can stay the same while the way you wear it changes everything.</p>
+  </div>
+  <div class="energy-strip">
+    <div class="energy-panel clean"><div class="energy-panel-bg"></div><div class="energy-panel-copy"><div class="energy-num">01</div><div class="energy-name" data-en="Clean" data-it="Essenziale">Clean</div><div class="energy-note" data-en="One piece / quiet focus" data-it="Un gioiello / attenzione essenziale">One piece / quiet focus</div></div></div>
+    <div class="energy-panel layered"><div class="energy-panel-bg"></div><div class="energy-panel-copy"><div class="energy-num">02</div><div class="energy-name" data-en="Layered" data-it="Layered">Layered</div><div class="energy-note" data-en="Add distance / texture / rhythm" data-it="Aggiungi distanza / texture / ritmo">Add distance / texture / rhythm</div></div></div>
+    <div class="energy-panel bolder"><div class="energy-panel-bg"></div><div class="energy-panel-copy"><div class="energy-num">03</div><div class="energy-name" data-en="Bolder" data-it="Più deciso">Bolder</div><div class="energy-note" data-en="More weight / more presence" data-it="Più peso / più presenza">More weight / more presence</div></div></div>
+  </div>
+  <div class="energy-footer"><strong class="serif" data-en="Day to night. Silver to gold. Or both." data-it="Dal giorno alla sera. Argento, oro. O entrambi.">Day to night. Silver to gold. Or both.</strong><span data-en="Wear one. Layer more. Mix silver and gold. The direction is yours." data-it="Indossane uno. Aggiungine altri. Mescola argento e oro. La direzione è tua.">Wear one. Layer more. Mix silver and gold. The direction is yours.</span></div>
+</section>
+
+
+
+
+<section class="ring-stack" data-label="THE EDIT / RING STACK" id="build-your-ring-stack">
+  <div class="ring-stack-preview">
+    <div class="ring-stack-top">
+      <div class="label" data-en="The Edit / 02 — Ring Stack" data-it="The Edit / 02 — Ring Stack">The Edit / 02 — Ring Stack</div>
+      <div class="ring-stack-count"><span data-en="Up to three rings" data-it="Fino a tre anelli">Up to three rings</span></div>
+    </div>
+
+    <div class="ring-stack-image">
+      <img class="stack-ring stack-top" id="stackTop" alt="Top ring">
+      <img class="stack-ring stack-middle" id="stackMiddle" alt="Middle ring">
+      <img class="stack-ring stack-bottom" id="stackBottom" alt="Bottom ring">
+    </div>
+
+    <div class="ring-stack-copy">
+      <div>
+        <span class="ring-mini" data-en="Current stack" data-it="Stack attuale">Current stack</span>
+        <h3 data-en="Build Your Ring Stack." data-it="Costruisci il tuo ring stack.">Build Your Ring Stack.</h3>
+      </div>
+      <div class="stack-summary" id="stackSummary">
+        <span class="stack-chip">Arena Ring</span>
+        <span class="stack-chip">Terra Ring</span>
+        <span class="stack-chip">Essence Ring</span>
+        <span class="stack-chip">Silver</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ring-stack-ui">
+    <div class="ring-ui-kicker" data-en="Choose up to three rings" data-it="Scegli fino a tre anelli">Choose up to three rings</div>
+    <h2 data-en="Three rings. One vertical composition." data-it="Tre anelli. Un’unica composizione verticale.">Three rings. One vertical composition.</h2>
+    <p class="serif ring-ui-intro" data-en="Build a ring stack by choosing the upper, middle and lower ring — then change the metal direction." data-it="Crea un ring stack scegliendo l’anello superiore, centrale e inferiore, poi cambia la finitura del metallo.">Build a ring stack by choosing the upper, middle and lower ring — then change the metal direction.</p>
+
+    <div class="stack-slot">
+      <div class="stack-slot-head">
+        <span data-en="Metal direction" data-it="Direzione metallo">Metal direction</span>
+        <strong id="metalLabel">Silver</strong>
+      </div>
+      <div class="stack-options">
+        <button class="stack-option active" type="button" data-slot="metal" data-ring="silver" data-it-value="Argento">Silver</button>
+        <button class="stack-option" type="button" data-slot="metal" data-ring="gold" data-it-value="Oro">Gold</button>
+      </div>
+    </div>
+
+    <div class="stack-slot">
+      <div class="stack-slot-head">
+        <span data-en="01 / Upper ring" data-it="01 / Anello superiore">01 / Upper ring</span>
+        <strong id="slotTopLabel">Arena Ring</strong>
+      </div>
+      <div class="stack-options">
+        <button class="stack-option active" type="button" data-slot="top" data-ring="arena">Arena Ring</button>
+        <button class="stack-option" type="button" data-slot="top" data-ring="terra">Terra Ring</button>
+        <button class="stack-option" type="button" data-slot="top" data-ring="essence">Essence Ring</button>
+        <button class="stack-option" type="button" data-slot="top" data-ring="virelle">Virelle Ring</button>
+        <button class="stack-option" type="button" data-slot="top" data-ring="lava">Lava Ring</button>
+        <button class="stack-option" type="button" data-slot="top" data-ring="none" data-en="None" data-it="Nessuno" data-it-value="Nessuno">None</button>
+      </div>
+    </div>
+
+    <div class="stack-slot">
+      <div class="stack-slot-head">
+        <span data-en="02 / Middle ring" data-it="02 / Anello centrale">02 / Middle ring</span>
+        <strong id="slotMiddleLabel">Terra Ring</strong>
+      </div>
+      <div class="stack-options">
+        <button class="stack-option" type="button" data-slot="middle" data-ring="arena">Arena Ring</button>
+        <button class="stack-option active" type="button" data-slot="middle" data-ring="terra">Terra Ring</button>
+        <button class="stack-option" type="button" data-slot="middle" data-ring="essence">Essence Ring</button>
+        <button class="stack-option" type="button" data-slot="middle" data-ring="virelle">Virelle Ring</button>
+        <button class="stack-option" type="button" data-slot="middle" data-ring="lava">Lava Ring</button>
+        <button class="stack-option" type="button" data-slot="middle" data-ring="none" data-en="None" data-it="Nessuno" data-it-value="Nessuno">None</button>
+      </div>
+    </div>
+
+    <div class="stack-slot">
+      <div class="stack-slot-head">
+        <span data-en="03 / Lower ring" data-it="03 / Anello inferiore">03 / Lower ring</span>
+        <strong id="slotBottomLabel">Essence Ring</strong>
+      </div>
+      <div class="stack-options">
+        <button class="stack-option" type="button" data-slot="bottom" data-ring="arena">Arena Ring</button>
+        <button class="stack-option" type="button" data-slot="bottom" data-ring="terra">Terra Ring</button>
+        <button class="stack-option active" type="button" data-slot="bottom" data-ring="essence">Essence Ring</button>
+        <button class="stack-option" type="button" data-slot="bottom" data-ring="virelle">Virelle Ring</button>
+        <button class="stack-option" type="button" data-slot="bottom" data-ring="lava">Lava Ring</button>
+        <button class="stack-option" type="button" data-slot="bottom" data-ring="none" data-en="None" data-it="Nessuno" data-it-value="Nessuno">None</button>
+      </div>
+    </div>
+
+    <div class="ring-selector-footer ring-asset-note">
+      <div class="ring-asset-copy">
+        <strong data-en="PRODUCT IMAGERY" data-it="IMMAGINI PRODOTTO">PRODUCT IMAGERY</strong>
+        <span data-en="Final photography of Arena, Terra, Essence, Virelle and Lava — including Silver and Gold variants — to be supplied or approved by CAINTÈ for final implementation."
+              data-it="Le fotografie definitive di Arena, Terra, Essence, Virelle e Lava — incluse le varianti Silver e Gold — saranno fornite o approvate da CAINTÈ per l’implementazione finale.">
+          Final photography of Arena, Terra, Essence, Virelle and Lava — including Silver and Gold variants — to be supplied or approved by CAINTÈ for final implementation.
+        </span>
+      </div>
+      <a class="cta" href="https://cainte.com/collections/rings-women" rel="noopener" data-en="Explore rings ↗" data-it="Esplora gli anelli ↗">Explore rings ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="edit-moments" data-label="THE EDIT / MOMENTS" id="style-by-moment">
+  <div class="moments-head"><div><div class="label" data-en="The Edit / 03 — Style by moment" data-it="The Edit / 03 — Stile per momento">The Edit / 03 — Style by moment</div><h2 data-en="Style it for the moment." data-it="Abbinalo al momento.">Style it for the moment.</h2></div><p class="serif" data-en="A simple styling guide: choose the context — everyday, after dark, summer or formal — and reveal a different way to wear CAINTÈ." data-it="Una guida di styling semplice: scegli il contesto — quotidiano, sera, estate o formale — e scopri un modo diverso di indossare CAINTÈ.">A simple styling guide: choose the context — everyday, after dark, summer or formal — and reveal a different way to wear CAINTÈ.</p></div>
+  <div class="moments-instruction" data-en="Select a moment to preview the styling direction." data-it="Seleziona un momento per vedere la direzione di styling.">Select a moment to preview the styling direction.</div>
+  <div class="moment-list">
+    <div class="moment everyday active"><div class="moment-bg"></div><div class="moment-num">01</div><div class="moment-name" data-en="Everyday" data-it="Ogni giorno">Everyday</div><div class="moment-note" data-en="Quiet / considered" data-it="Essenziale / curato">Quiet / considered</div></div>
+    <div class="moment night"><div class="moment-bg"></div><div class="moment-num">02</div><div class="moment-name" data-en="After dark" data-it="Dopo il tramonto">After dark</div><div class="moment-note" data-en="Layered / stronger" data-it="Layered / più deciso">Layered / stronger</div></div>
+    <div class="moment summer"><div class="moment-bg"></div><div class="moment-num">03</div><div class="moment-name" data-en="Summer" data-it="Estate">Summer</div><div class="moment-note" data-en="Light / skin / movement" data-it="Luce / pelle / movimento">Light / skin / movement</div></div>
+    <div class="moment formal"><div class="moment-bg"></div><div class="moment-num">04</div><div class="moment-name" data-en="Formal" data-it="Formale">Formal</div><div class="moment-note" data-en="One focus / restraint" data-it="Un punto focale / misura">One focus / restraint</div></div>
+  </div>
+</section>
+
+<section class="edit-campaign" data-label="THE EDIT / CAMPAIGN" id="edit-campaign">
+  <div class="campaign-visual"><div class="label" data-en="The Edit / 04 — Campaign & Gifting" data-it="The Edit / 04 — Campagne e gifting">The Edit / 04 — Campaign & Gifting</div><h2 data-en="Seen in the campaign. Worn your way." data-it="Visto nella campagna. Indossato a modo tuo.">Seen in the campaign. Worn your way.</h2><p class="serif" data-en="Move from the image that inspired you into the world of CAINTÈ collections." data-it="Passa dall'immagine che ti ha ispirato al mondo delle collezioni CAINTÈ.">Move from the image that inspired you into the world of CAINTÈ collections.</p><a class="cta" href="https://cainte.com/pages/collections" rel="noopener" data-en="Explore all collections ↗" data-it="Esplora tutte le collezioni ↗">Explore all collections ↗</a></div>
+  <div class="gift-edit"><div class="label" data-en="Gift Finder" data-it="Gift Finder">Gift Finder</div><h3 data-en="Choose a direction." data-it="Scegli una direzione.">Choose a direction.</h3><div class="gift-filter-grid"><button class="gift-filter active" type="button" data-gift="him"><span>01</span><strong data-en="For him" data-it="Per lui">For him</strong></button><button class="gift-filter" type="button" data-gift="her"><span>02</span><strong data-en="For her" data-it="Per lei">For her</strong></button><button class="gift-filter" type="button" data-gift="first"><span>03</span><strong data-en="First piece" data-it="Primo gioiello">First piece</strong></button><button class="gift-filter" type="button" data-gift="budget"><span>04</span><strong data-en="€80 & under" data-it="€80 e meno">€80 & under</strong></button></div><div class="gift-preview" id="giftPreview"><div><div class="gift-preview-kicker" data-en="Selected direction" data-it="Direzione selezionata">Selected direction</div><h4 id="giftPreviewTitle">For him</h4><p id="giftPreviewText">A focused starting point built around clean, versatile pieces.</p><div class="gift-chips" id="giftChips"><span class="gift-chip">Cuban Chain 3mm</span><span class="gift-chip">Original Necklace</span><span class="gift-chip">Cross Necklace</span></div></div><div class="gift-actions"><a class="cta" id="giftCta" href="https://cainte.com/collections/gift-for-him" rel="noopener">Explore selection ↗</a><a class="cta gift-cta-secondary" id="giftCtaSecondary" href="https://cainte.com/collections/gift-for-her-under-80" rel="noopener" hidden>For her under €80 ↗</a></div></div></div>
+</section>
+
+<section class="edit-to-your" data-label="YOUR CAINTÈ / 04" id="edit-to-your"><div class="edit-to-your-inner"><div class="label" data-en="Next / 04" data-it="Avanti / 04">Next / 04</div><h2 data-en="Now it's yours." data-it="Ora è tuo.">Now it's yours.</h2><p class="serif" data-en="From styling a piece to owning it." data-it="Dallo styling del gioiello al momento in cui diventa tuo.">From styling a piece to owning it.</p><a class="cta" href="#your" data-en="Enter Your CAINTÈ ↓" data-it="Entra in Your CAINTÈ ↓">Enter Your CAINTÈ ↓</a></div></section>
+</div>
+
+<section class="your-portal" data-label="YOUR CAINTÈ / 04" id="your">
+  <div class="your-portal-inner">
+    <div>
+      <div class="label">04 / 04</div>
+      <h2>Your<br/>CAINTÈ</h2>
+    </div>
+    <p class="serif" data-en="Your pieces. Your care. Your history." data-it="I tuoi gioielli. La loro cura. La tua storia.">Your pieces. Your care. Your history.</p>
+  </div>
+</section>
+
+<section class="your-collection" data-label="YOUR / COLLECTION" id="your-collection">
+  <div class="your-section-head">
+    <div>
+      <div class="label" data-en="Your CAINTÈ / 01 — Collection" data-it="Your CAINTÈ / 01 — Collezione">Your CAINTÈ / 01 — Collection</div>
+      <h2 data-en="Your jewelry box." data-it="Il tuo portagioie.">Your jewelry box.</h2>
+    </div>
+    <p class="serif" data-en="Every piece you own, in one place." data-it="Ogni gioiello che possiedi, in un solo posto.">Every piece you own, in one place.</p>
+  </div>
+
+  <div class="your-collection-grid">
+    <div class="piece-list" role="list">
+      <button class="piece-card active" type="button" data-piece="original">
+        <div class="piece-card-image"><img src="https://cainte.com/cdn/shop/files/original-necklace-694966_720x.jpg?v=1731514091" alt="Original Necklace"></div>
+        <div class="piece-card-meta"><span>Original Necklace</span><small data-en="Necklace" data-it="Collana">Necklace</small></div>
+      </button>
+
+      <button class="piece-card" type="button" data-piece="cuban">
+        <div class="piece-card-image"><img src="https://cainte.com/cdn/shop/files/cuban-chain-3mm-585809_720x.jpg?v=1731513966" alt="Cuban Chain 3mm"></div>
+        <div class="piece-card-meta"><span>Cuban Chain 3mm</span><small data-en="Necklace" data-it="Collana">Necklace</small></div>
+      </button>
+
+      <button class="piece-card" type="button" data-piece="essence">
+        <div class="piece-card-image"><img src="https://cainte.com/cdn/shop/files/essence-ring-663597_720x.jpg?v=1731513976" alt="Essence Ring"></div>
+        <div class="piece-card-meta"><span>Essence Ring</span><small data-en="Ring" data-it="Anello">Ring</small></div>
+      </button>
+    </div>
+
+    <div class="piece-passport">
+      <div class="piece-passport-top">
+        <div class="label" data-en="Piece Passport" data-it="Passaporto del gioiello">Piece Passport</div>
+        <span class="passport-status" data-en="Lifetime / Active" data-it="Lifetime / Attiva">Lifetime / Active</span>
+      </div>
+
+      <div class="passport-hero">
+        <img id="passportImage" src="https://cainte.com/cdn/shop/files/original-necklace-694966_720x.jpg?v=1731514091" alt="Selected CAINTÈ piece">
+      </div>
+
+      <div class="passport-title">
+        <h3 id="passportName">Original Necklace</h3>
+        <span id="passportCategory" data-en="Necklace" data-it="Collana">Necklace</span>
+      </div>
+
+      <div class="passport-data">
+        <div><span data-en="Material" data-it="Materiale">Material</span><strong id="passportMaterial">316 Stainless Steel</strong></div>
+        <div><span data-en="Finish" data-it="Finitura">Finish</span><strong id="passportFinish">Silver</strong></div>
+        <div><span data-en="Purchased" data-it="Acquistato">Purchased</span><strong id="passportDate">12 MAY 2026</strong></div>
+        <div><span data-en="Order" data-it="Ordine">Order</span><strong id="passportOrder">#CA-48291</strong></div>
+      </div>
+
+      <div class="passport-actions">
+        <a href="#standard-care" class="passport-action" data-en="Care ↗" data-it="Cura ↗">Care ↗</a>
+        <button type="button" class="passport-action" id="openClaim" data-en="Warranty +" data-it="Garanzia +">Warranty +</button>
+        <a href="#edit-energy" class="passport-action" data-en="Style it ↗" data-it="Abbinalo ↗">Style it ↗</a>
+        <button type="button" class="passport-action" id="orderAction" data-en="Order +" data-it="Ordine +">Order +</button>
+      </div>
+      <div class="passport-brand-note">
+        <span data-en="Care guidance and Style It recommendations require final content supplied or approved by CAINTÈ."
+              data-it="Le indicazioni Care e i suggerimenti Style It richiedono contenuti definitivi forniti o approvati da CAINTÈ.">
+          Care guidance and Style It recommendations require final content supplied or approved by CAINTÈ.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="your-asset-note">
+    <strong data-en="COLLECTION IMAGERY" data-it="IMMAGINI DELLA COLLEZIONE">COLLECTION IMAGERY</strong>
+    <span data-en="Final jewelry-box imagery: product-only photography supplied or approved by CAINTÈ."
+          data-it="Immagini definitive del portagioie: fotografie del solo gioiello, fornite o approvate da CAINTÈ.">
+      Final jewelry-box imagery: product-only photography supplied or approved by CAINTÈ.
+    </span>
+  </div>
+</section>
+
+<section class="your-protection" data-label="YOUR / PROTECTION" id="your-protection">
+  <div class="your-section-head light">
+    <div>
+      <div class="label" data-en="Your CAINTÈ / 02 — Protection" data-it="Your CAINTÈ / 02 — Protezione">Your CAINTÈ / 02 — Protection</div>
+      <h2 data-en="After the order." data-it="Dopo l’ordine.">After the order.</h2>
+    </div>
+    <p class="serif" data-en="The useful things, without the search." data-it="Quello che serve, senza doverlo cercare.">The useful things, without the search.</p>
+  </div>
+
+  <div class="protection-grid">
+    <article class="protection-card warranty-card">
+      <div class="protection-top"><span>01</span><span data-en="Jewelry" data-it="Gioielli">Jewelry</span></div>
+      <h3 data-en="Lifetime Guarantee." data-it="Lifetime Guarantee.">Lifetime Guarantee.</h3>
+      <p data-en="Your coverage and claim access live with the piece you own." data-it="Copertura e accesso alla richiesta restano insieme al gioiello che possiedi.">Your coverage and claim access live with the piece you own.</p>
+      <div class="coverage-tags">
+        <span data-en="Tarnishing" data-it="Ossidazione">Tarnishing</span>
+        <span data-en="Fading" data-it="Scolorimento">Fading</span>
+        <span data-en="Accidental breakage" data-it="Rottura accidentale">Accidental breakage</span>
+      </div>
+      <button class="your-btn" type="button" id="openClaim2" data-en="Start warranty claim +" data-it="Avvia richiesta di garanzia +">Start warranty claim +</button>
+    </article>
+
+    <article class="protection-card return-card" id="returnCard">
+      <div class="protection-top"><span>02</span><span data-en="Orders" data-it="Ordini">Orders</span></div>
+      <h3 data-en="Return or exchange." data-it="Reso o cambio.">Return or exchange.</h3>
+      <p data-en="For an order you want to return or exchange — separate from a warranty claim. See its eligibility, deadlines and any return costs in one place."
+          data-it="Per un ordine che vuoi rendere o cambiare — separatamente da una richiesta di garanzia. Visualizza idoneità, scadenze ed eventuali costi di reso in un solo posto.">
+        For an order you want to return or exchange — separate from a warranty claim. See its eligibility, deadlines and any return costs in one place.
+      </p>
+      <div class="return-mini">
+        <span data-en="Eligibility" data-it="Idoneità">Eligibility</span>
+        <strong data-en="Based on order & policy" data-it="In base a ordine e policy">Based on order & policy</strong>
+      </div>
+      <button class="your-btn ghost" type="button" id="returnAction" data-en="View return options +" data-it="Vedi opzioni di reso +">View return options +</button>
+    </article>
+  </div>
+
+  <div class="system-note">
+    <strong data-en="ACCOUNT INTEGRATION" data-it="INTEGRAZIONE ACCOUNT">ACCOUNT INTEGRATION</strong>
+    <span data-en="Claim status, return eligibility, deadlines and fees would be populated from CAINTÈ's live account and policy systems."
+          data-it="Stato delle richieste, idoneità al reso, scadenze e costi verrebbero popolati dai sistemi account e policy di CAINTÈ.">
+      Claim status, return eligibility, deadlines and fees would be populated from CAINTÈ's live account and policy systems.
+    </span>
+  </div>
+</section>
+
+<section class="your-account" data-label="YOUR / ACCOUNT" id="your-account">
+  <div class="your-section-head compact">
+    <div>
+      <div class="label" data-en="Your CAINTÈ / 03 — Account" data-it="Your CAINTÈ / 03 — Account">Your CAINTÈ / 03 — Account</div>
+      <h2 data-en="Keep it simple." data-it="Tutto semplice.">Keep it simple.</h2>
+    </div>
+  </div>
+
+  <div class="account-grid">
+    <article class="account-card" id="savedSizesCard">
+      <div class="account-num">01</div>
+      <h3 data-en="Saved sizes." data-it="Taglie salvate.">Saved sizes.</h3>
+      <div class="size-row"><span data-en="Ring" data-it="Anello">Ring</span><strong id="savedRingSize">54</strong></div>
+      <div class="size-row"><span data-en="Bracelet" data-it="Bracciale">Bracelet</span><strong id="savedBraceletSize">M</strong></div>
+      <div class="size-row"><span data-en="Watch" data-it="Orologio">Watch</span><strong id="savedWatchSize">36</strong></div>
+      <button class="text-action" type="button" id="editSizesAction" data-en="Edit sizes +" data-it="Modifica taglie +">Edit sizes +</button>
+    </article>
+
+    <article class="account-card rewards-card">
+      <div class="account-num">02</div>
+      <h3>CAINTÈ Rewards.</h3>
+      <div class="reward-tier">
+        <span data-en="Your status" data-it="Il tuo livello">Your status</span>
+        <strong>Silver</strong>
+      </div>
+      <div class="tier-track"><span class="tier-active"></span><span></span><span></span></div>
+      <div class="tier-labels"><span>Silver</span><span>Gold</span><span>Platinum</span></div>
+      <div class="rewards-note">
+        <span data-en="Tier thresholds and final benefits supplied by CAINTÈ." data-it="Soglie e benefit definitivi forniti da CAINTÈ.">Tier thresholds and final benefits supplied by CAINTÈ.</span>
+      </div>
+    </article>
+
+    <article class="account-card support-card">
+      <div class="account-num">03</div>
+      <h3 data-en="Support." data-it="Supporto.">Support.</h3>
+      <div class="support-links">
+        <button type="button" id="supportOrder" data-en="Order" data-it="Ordine">Order</button>
+        <button type="button" id="supportWarranty" data-en="Warranty" data-it="Garanzia">Warranty</button>
+        <button type="button" id="supportReturn" data-en="Return" data-it="Reso">Return</button>
+        <button type="button" id="supportSize" data-en="Size" data-it="Taglia">Size</button>
+      </div>
+      <button class="text-action" type="button" id="contactCainteAction" data-en="Something else? Contact CAINTÈ ↗" data-it="Altro? Contatta CAINTÈ ↗">Something else? Contact CAINTÈ ↗</button>
+    </article>
+  </div>
+</section>
+<div class="claim-overlay" id="claimOverlay" aria-hidden="true">
+  <div class="claim-panel">
+    <button class="claim-close" type="button" id="closeClaim" aria-label="Close">×</button>
+    <div class="label" data-en="Lifetime Guarantee" data-it="Lifetime Guarantee">Lifetime Guarantee</div>
+    <h3 data-en="Start with the issue." data-it="Parti dal problema.">Start with the issue.</h3>
+    <div class="claim-piece">
+      <span data-en="Selected piece" data-it="Gioiello selezionato">Selected piece</span>
+      <strong id="claimPieceName">Original Necklace</strong>
+    </div>
+    <div class="claim-issues">
+      <button type="button" data-en="Tarnishing" data-it="Ossidazione">Tarnishing</button>
+      <button type="button" data-en="Fading" data-it="Scolorimento">Fading</button>
+      <button type="button" data-en="Accidental breakage" data-it="Rottura accidentale">Accidental breakage</button>
+      <button type="button" data-en="Other" data-it="Altro">Other</button>
+    </div>
+    <label class="claim-upload">
+      <span data-en="Add photo" data-it="Aggiungi foto">Add photo</span>
+      <input type="file" accept="image/*">
+    </label>
+    <button class="claim-submit" type="button" data-en="Continue →" data-it="Continua →">Continue →</button>
+    <p data-en="Prototype flow — UX complete; live submission and tracking require CAINTÈ account integration."
+       data-it="Flusso prototipo — invio e tracciamento definitivi richiedono l’integrazione con l’account CAINTÈ.">
+       Prototype flow — UX complete; live submission and tracking require CAINTÈ account integration.
+    </p>
+  </div>
+</div>
+
+<div class="utility-overlay" id="sizesOverlay" aria-hidden="true">
+  <div class="utility-panel">
+    <button class="utility-close" type="button" id="closeSizes" aria-label="Close">×</button>
+    <div class="label" data-en="Your CAINTÈ / Saved sizes" data-it="Your CAINTÈ / Taglie salvate">Your CAINTÈ / Saved sizes</div>
+    <h3 data-en="Edit your sizes." data-it="Modifica le tue taglie.">Edit your sizes.</h3>
+    <p data-en="Keep the sizes you use most often ready for future purchases."
+       data-it="Tieni a portata di mano le taglie che usi più spesso per i prossimi acquisti.">
+      Keep the sizes you use most often ready for future purchases.
+    </p>
+
+    <div class="utility-fields">
+      <label>
+        <span data-en="Ring" data-it="Anello">Ring</span>
+        <input id="ringSizeInput" type="text" value="54" inputmode="numeric">
+      </label>
+      <label>
+        <span data-en="Bracelet" data-it="Bracciale">Bracelet</span>
+        <select id="braceletSizeInput">
+          <option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option>
+        </select>
+      </label>
+      <label>
+        <span data-en="Watch" data-it="Orologio">Watch</span>
+        <input id="watchSizeInput" type="text" value="36" inputmode="numeric">
+      </label>
+    </div>
+
+    <button class="utility-primary" type="button" id="saveSizes" data-en="Save sizes" data-it="Salva taglie">Save sizes</button>
+    <div class="utility-confirm" id="sizesConfirm" aria-live="polite"></div>
+  </div>
+</div>
+
+<div class="utility-overlay" id="contactOverlay" aria-hidden="true">
+  <div class="utility-panel">
+    <button class="utility-close" type="button" id="closeContact" aria-label="Close">×</button>
+    <div class="label" data-en="Your CAINTÈ / Support" data-it="Your CAINTÈ / Supporto">Your CAINTÈ / Support</div>
+    <h3 data-en="Contact CAINTÈ." data-it="Contatta CAINTÈ.">Contact CAINTÈ.</h3>
+    <p data-en="For anything that does not fit the guided flows, contact the CAINTÈ team directly."
+       data-it="Per qualsiasi esigenza che non rientra nei flussi guidati, contatta direttamente il team CAINTÈ.">
+      For anything that does not fit the guided flows, contact the CAINTÈ team directly.
+    </p>
+
+    <div class="contact-address">
+      <span data-en="Support email" data-it="Email supporto">Support email</span>
+      <strong>info@cainte.com</strong>
+    </div>
+
+    <div class="contact-actions">
+      <button class="utility-secondary" type="button" id="copySupportEmail" data-en="Copy email" data-it="Copia email">Copy email</button>
+      <a class="utility-primary contact-mail-link" href="mailto:info@cainte.com?subject=CAINT%C3%88%20Support" data-en="Open email app ↗" data-it="Apri app email ↗">Open email app ↗</a>
+    </div>
+    <div class="utility-confirm" id="contactConfirm" aria-live="polite"></div>
+  </div>
+</div>
+
+<section class="manifesto" data-label="THE WORLD / END"><div><h2 class="reveal">One piece.<br/>An entire world.</h2><p class="serif reveal">From idea. To piece. To style. To yours.</p></div></section>
+<footer class="footer" data-label="CAINTÈ / END"><div class="footer-logo">CAINTÈ</div><div class="footer-line">Timeless by Design.<br/>Danish by Origin.</div><div class="footer-note">Independent concept — The World of CAINTÈ / Interactive prototype</div></footer>
+</main>
+<script>
+const intro=document.getElementById('intro');setTimeout(()=>{intro.classList.add('done');document.body.classList.remove('lock')},1750);
+const index=document.getElementById('worldIndex');
+const revealObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in-view')}),{threshold:.16});document.querySelectorAll('.reveal,.portal,.scene,.trailer,.manifesto').forEach(el=>revealObs.observe(el));
+const sectionObs=new IntersectionObserver(es=>{const v=es.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(v){const l=v.target.getAttribute('data-label');if(l)index.textContent=l}},{threshold:[.2,.4,.6]});document.querySelectorAll('[data-label]').forEach(el=>sectionObs.observe(el));
+const bridge=document.getElementById('bridge'),words=[...document.querySelectorAll('.bridge-word')];function updateBridge(){const r=bridge.getBoundingClientRect(),total=r.height-innerHeight,moved=Math.min(Math.max(-r.top,0),total),p=total>0?moved/total:0,idx=Math.min(3,Math.floor(p*4));words.forEach((w,i)=>{w.classList.toggle('active',i===idx);w.classList.toggle('dim',i<idx)});if(p>.88)words.forEach(w=>w.classList.add('active'))}let t=false;addEventListener('scroll',()=>{if(!t){requestAnimationFrame(()=>{updateBridge();t=false});t=true}},{passive:true});updateBridge();
+
+// final bilingual mode + reliable internal navigation
+const IT_TRANSLATIONS = {"Independent concept — The World of CAINTÈ / Interactive prototype":"Concept indipendente — The World of CAINTÈ / Prototipo interattivo","Shop":"Shop","The World":"Il Mondo","Inside":"Dentro CAINTÈ","Standard":"CAINTÈ","Edit":"The Edit","Your":"Your CAINTÈ","Beyond the piece.":"Oltre il gioiello.","Enter the world ↓":"Entra nel mondo ↓","From idea.":"Dall’idea.","To piece.":"Al gioiello.","To style.":"Allo stile.","To yours.":"Fino a diventare tuo.","Four perspectives. One world.":"Quattro prospettive. Un solo mondo.","The people. The place. The idea.":"Le persone. Il luogo. L’idea.","Discover what exists before the piece ↓":"Scopri cosa viene prima del gioiello ↓","The Origin / 01":"Le origini / 01","Copenhagen.":"Copenaghen.","Where the CAINTÈ story begins.":"Dove inizia la storia di CAINTÈ.","CAINTÈ was established in Copenhagen in 2021.":"CAINTÈ nasce a Copenaghen nel 2021.","The Origin / 02":"Le origini / 02","Point of View / 03":"Punto di vista / 03","Jewelry as":"Il gioiello come","self-expression.":"espressione di sé.","Not an accessory added at the end. A detail that becomes part of how you show up.":"Non un accessorio aggiunto alla fine. Un dettaglio che diventa parte del modo in cui ti presenti al mondo.","Minimal":"Minimal","Bold":"Deciso","Gold":"Oro","Silver":"Argento","Everyday":"Ogni giorno","Danish":"Danese","by Origin.":"per origine.","Design identity / 04":"Identità di design / 04","Form":"Forma","Balance":"Equilibrio","Function":"Funzione","Longevity":"Durata","A language":"Un linguaggio","of form.":"di forme.","Line":"Linea","Shape / rhythm / repetition":"Forma / ritmo / ripetizione","Surface":"Superficie","Finish / reflection / restraint":"Finitura / riflesso / essenzialità","Idea":"Idea","Design":"Design","Material":"Materiale","Piece":"Gioiello","Behind":"Dietro","CAINTÈ.":"CAINTÈ.","Founder / CEO":"Fondatore / CEO","the drop.":"il drop.","Every drop has a setting, a mood and a point of view. Collection Stories gives each campaign room to be experienced before returning to the pieces.":"Ogni drop ha un luogo, un’atmosfera e un punto di vista. Collection Stories dà a ogni campagna lo spazio per essere vissuta prima di tornare ai gioielli.","Next / 02":"Avanti / 02","An idea":"Un’idea","becomes a piece.":"diventa un gioiello.","But what makes the piece endure?":"Ma cosa rende un gioiello capace di durare?","Enter The Standard ↓":"Entra in The Standard ↓","The CAINTÈ":"Lo Standard","The Edit":"The Edit","Not just what you wear. How you wear it.":"Non solo ciò che indossi. Ma come lo indossi.","Your pieces. Your care. Your history.":"I tuoi gioielli. La loro cura. La tua storia.","Original Necklace":"Original Necklace","Lifetime / Active":"Lifetime / Attiva","One piece.":"Un gioiello.","An entire world.":"Un mondo intero.","From idea. To piece. To style. To yours.":"Dall’idea. Al gioiello. Allo stile. Fino a diventare tuo.","Timeless by Design.":"Timeless by Design.","Danish by Origin.":"Danish by Origin.","PHOTO OF COPENHAGEN":"FOTO DI COPENAGHEN","Selected by CAINTÈ":"Scelta da CAINTÈ","PHOTO OF MATHIAS":"FOTO DI MATHIAS","If approved by CAINTÈ":"Se approvata da CAINTÈ","CAINTÈ began with the courage to turn a personal idea into something real. After years of wearing jewelry, Mathias had developed a clear vision of the pieces he wanted to wear: designs that could become a natural part of personal style. From that vision came CAINTÈ, with attention to shape, design, length, size and material down to the smallest detail.":"CAINTÈ nasce dal coraggio di trasformare un’idea personale in qualcosa di concreto. Dopo anni passati a indossare gioielli, Mathias aveva sviluppato una visione chiara dei pezzi che voleva indossare: design capaci di diventare una parte naturale dello stile personale. Da questa visione nasce CAINTÈ, con attenzione a forma, design, lunghezza, dimensioni e materiali fino al più piccolo dettaglio.","“Is it something for me?”":"“Fa per me?”","“Is it too feminine?”":"“È troppo femminile?”","“Can I wear it?”":"“Posso indossarlo?”","Design & Process / 05":"Design e processo / 05","Line, surface, proportion and detail shape the character of a CAINTÈ piece. From the first idea to the final object, every decision becomes part of the design.":"Linea, superficie, proporzione e dettaglio definiscono il carattere di un gioiello CAINTÈ. Dalla prima idea all’oggetto finale, ogni decisione diventa parte del design.","From idea to piece":"Dall’idea al gioiello","CAINTÈ's real studio process would live here through sketches, prototypes, material choices and working imagery selected by the brand.":"Qui prende forma il vero processo creativo di CAINTÈ attraverso schizzi, prototipi, scelte dei materiali e immagini di lavoro selezionate dal brand.","Reference / intention":"Riferimento / intenzione","Form / proportion":"Forma / proporzione","Develop":"Sviluppo","Test / refine":"Test / perfezionamento","Finish / feel":"Finitura / sensazione","Refine":"Rifinitura","Detail / resolve":"Dettaglio / definizione","Final object":"Oggetto finale","The people / 06":"Le persone / 06","A brand is shaped by the people behind every idea, piece, image and decision.":"Un brand prende forma attraverso le persone dietro ogni idea, gioiello, immagine e decisione.","TEAM PORTRAIT":"RITRATTO DEL TEAM","Photo selected by CAINTÈ":"Foto scelta da CAINTÈ","The team":"Il team","Names and roles selected by CAINTÈ":"Nomi e ruoli selezionati da CAINTÈ","THE STUDIO":"LO STUDIO","Working imagery selected by CAINTÈ":"Immagini di lavoro selezionate da CAINTÈ","Behind the work":"Dietro il lavoro","Design / campaign / product":"Design / campagna / prodotto","Collection Stories / 07":"Storie delle collezioni / 07","Explore all collections ↗":"Esplora tutte le collezioni ↗","001—004":"001—004","Drop archive / campaign stories":"Archivio drop / storie delle campagne"};
+const originalText = new WeakMap();
+function walkTextNodes(root, fn){
+  const walker=document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  let node; while(node=walker.nextNode()) fn(node);
+}
+walkTextNodes(document.body, node=>{
+  const key=node.nodeValue.trim();
+  if(key && IT_TRANSLATIONS[key]) originalText.set(node,node.nodeValue);
+});
+window.currentLang='en';
+window.INDEX_IT={'THE WORLD / 00':'IL MONDO / 00','INSIDE / 01':'DENTRO CAINTÈ / 01','INSIDE / ORIGIN':'DENTRO / ORIGINI','INSIDE / STORY':'DENTRO / STORIA','INSIDE / EXPRESSION':'DENTRO / ESPRESSIONE','INSIDE / DANISH':'DENTRO / IDENTITÀ','INSIDE / DESIGN':'DENTRO / DESIGN','INSIDE / PEOPLE':'DENTRO / PERSONE','INSIDE / STORIES':'DENTRO / STORIE','STANDARD / 02':'STANDARD / 02','THE EDIT / 03':'THE EDIT / 03','THE EDIT / ENERGY':'THE EDIT / STYLING','THE EDIT / LAYERING':'THE EDIT / LAYERING','THE EDIT / MOMENTS':'THE EDIT / MOMENTI','THE EDIT / CAMPAIGN':'THE EDIT / CAMPAGNA','YOUR CAINTÈ / 04':'YOUR CAINTÈ / 04','YOUR / COLLECTION':'YOUR / COLLEZIONE','YOUR / PROTECTION':'YOUR / PROTEZIONE','YOUR / ACCOUNT':'YOUR / ACCOUNT','YOUR / END':'YOUR / FINE','THE WORLD / END':'IL MONDO / FINE'};
+function setLanguage(lang){
+  window.currentLang=lang;
+  document.documentElement.lang=lang;
+  walkTextNodes(document.body,node=>{
+    const base=originalText.get(node);
+    if(!base) return;
+    const key=base.trim();
+    if(lang==='it' && IT_TRANSLATIONS[key]){
+      const pre=base.match(/^\s*/)[0], post=base.match(/\s*$/)[0];
+      node.nodeValue=pre+IT_TRANSLATIONS[key]+post;
+    } else node.nodeValue=base;
+  });
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  const stdNav=document.querySelector('.nav a[href="#standard-trailer"]'); if(stdNav) stdNav.textContent='Standard';
+  const idx=document.getElementById('worldIndex'); if(idx){ const raw=idx.dataset.rawLabel || idx.textContent; idx.dataset.rawLabel=raw; idx.textContent=(lang==='it' && window.INDEX_IT[raw])?window.INDEX_IT[raw]:raw; }
+  try{ localStorage.setItem('cainte-language',lang); }catch(e){}
+}
+function getSavedLanguage(){ try{ return localStorage.getItem('cainte-language'); }catch(e){ return null; } }
+document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>setLanguage(btn.dataset.lang)));
+setLanguage(getSavedLanguage()||'en');
+
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[href^="#"]');
+  if(!a) return;
+  const target=document.querySelector(a.getAttribute('href'));
+  if(!target) return;
+  e.preventDefault();
+  target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+</script>
+
+<script>
+(function(){
+  function updateInlineI18n(lang){
+    document.querySelectorAll('[data-en][data-it]').forEach(el=>{
+      el.textContent = lang==='it' ? el.dataset.it : el.dataset.en;
+    });
+  }
+  const previousSetLanguage = window.setLanguage || setLanguage;
+  window.setLanguage = function(lang){
+    previousSetLanguage(lang);
+    updateInlineI18n(lang);
+  };
+  // Existing click handlers resolve setLanguage at call time in this page; re-bind to guarantee v0.5 inline blocks update too.
+  document.querySelectorAll('.lang-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>updateInlineI18n(btn.dataset.lang));
+  });
+  updateInlineI18n(window.currentLang || getSavedLanguage() || 'en');
+})();
+</script>
+
+
+<script>
+(function(){
+  const selections={base:'Original Necklace',second:'Cuban Chain 3mm',direction:'Mixed metals'};
+  const baseChoice=document.getElementById('baseChoice');
+  const secondChoice=document.getElementById('secondChoice');
+  const directionChoice=document.getElementById('directionChoice');
+  const resultBase=document.getElementById('resultBase');
+  const resultSecond=document.getElementById('resultSecond');
+  const resultDirection=document.getElementById('resultDirection');
+  const resultTitle=document.getElementById('editResultTitle');
+  const getLabel=(btn)=> (window.currentLang==='it' && btn.dataset.itValue) ? btn.dataset.itValue : btn.dataset.value;
+  function updateBuilderText(){
+    const activeBase=document.querySelector('.builder-option[data-group="base"].active');
+    const activeSecond=document.querySelector('.builder-option[data-group="second"].active');
+    const activeDirection=document.querySelector('.builder-option[data-group="direction"].active');
+    if(activeBase){const t=getLabel(activeBase); baseChoice.textContent=t; resultBase.textContent=t; resultTitle.textContent=(window.currentLang==='it' ? 'Costruito attorno a ' : 'Built around ') + t + '.';}
+    if(activeSecond){const t=getLabel(activeSecond); secondChoice.textContent=t; resultSecond.textContent=t;}
+    if(activeDirection){const t=getLabel(activeDirection); directionChoice.textContent=t; resultDirection.textContent=t;}
+  }
+  document.querySelectorAll('.builder-option[data-group]').forEach(btn=>btn.addEventListener('click',()=>{
+    const group=btn.dataset.group;
+    document.querySelectorAll('.builder-option[data-group="'+group+'"]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    selections[group]=btn.dataset.value;
+    updateBuilderText();
+  }));
+  document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>requestAnimationFrame(updateBuilderText)));
+  updateBuilderText();
+})();
+</script>
+
+<script>
+(function(){
+  const stage=document.getElementById('jewelryStage');
+  const base=document.getElementById('floatingBase');
+  const secondImg=document.getElementById('floatingSecond');
+  const stageBaseLabel=document.getElementById('stageBaseLabel');
+  const stageSecondLabel=document.getElementById('stageSecondLabel');
+  const assets={
+    original:{silver:'https://cainte.com/cdn/shop/files/original-necklace-257881_720x.jpg?v=1731514091',gold:'https://cainte.com/cdn/shop/files/original-necklace-463035_720x.jpg?v=1731514089'},
+    ice:{silver:'https://cainte.com/cdn/shop/files/ice-necklace-522183_720x.jpg?v=1731513996',gold:'https://cainte.com/cdn/shop/files/ice-necklace-522183_720x.jpg?v=1731513996'},
+    cross:{silver:'https://cainte.com/cdn/shop/files/cross-necklace-148221_720x.jpg?v=1731513967',gold:'https://cainte.com/cdn/shop/files/cross-necklace-403322_720x.jpg?v=1731513968'},
+    cuban:{silver:'https://cainte.com/cdn/shop/files/cuban-chain-3mm-585809_720x.jpg?v=1731513966',gold:'https://cainte.com/cdn/shop/files/cuban-chain-3mm-543547_720x.jpg?v=1731513965'}
+  };
+  const keyFor=(value)=>{
+    if(value==='Original Necklace') return 'original';
+    if(value==='Ice Necklace') return 'ice';
+    if(value==='Cross Necklace') return 'cross';
+    return 'cuban';
+  };
+  function labelFor(btn){ return (window.currentLang==='it' && btn.dataset.itValue) ? btn.dataset.itValue : btn.dataset.value; }
+  function updateStage(){
+    const baseBtn=document.querySelector('.builder-option[data-group="base"].active');
+    const secondBtn=document.querySelector('.builder-option[data-group="second"].active');
+    const metalBtn=document.querySelector('.builder-option[data-group="direction"].active');
+    if(!baseBtn||!secondBtn||!metalBtn||!stage||!base||!secondImg) return;
+
+    const baseVal=baseBtn.dataset.value;
+    const secondVal=secondBtn.dataset.value;
+    const direction=metalBtn.dataset.value;
+
+    let baseMetal='silver', secondMetal='silver';
+    if(direction==='Gold'){ baseMetal='gold'; secondMetal='gold'; }
+    else if(direction==='Mixed metals'){ baseMetal='gold'; secondMetal='silver'; }
+
+    base.src=assets[keyFor(baseVal)][baseMetal];
+    base.alt='CAINTÈ ' + baseVal;
+
+    stage.classList.toggle('no-second',secondVal==='No second layer');
+    if(secondVal!=='No second layer'){
+      secondImg.src=assets[keyFor(secondVal)][secondMetal];
+      secondImg.alt='CAINTÈ ' + secondVal;
+    }
+
+    if(stageBaseLabel) stageBaseLabel.textContent=labelFor(baseBtn);
+    if(stageSecondLabel) stageSecondLabel.textContent=labelFor(secondBtn);
+  }
+  document.querySelectorAll('.builder-option[data-group="base"],.builder-option[data-group="second"],.builder-option[data-group="direction"]').forEach(btn=>btn.addEventListener('click',updateStage));
+  document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>requestAnimationFrame(updateStage)));
+  updateStage();
+
+  const giftData={
+    him:{en:{title:'For him',text:'A focused starting point built around clean, versatile pieces.',chips:['Cuban Chain 3mm','Original Necklace','Cross Necklace'],cta:'Explore gifts for him ↗'},it:{title:'Per lui',text:'Un punto di partenza essenziale, costruito attorno a gioielli versatili e facili da indossare.',chips:['Cuban Chain 3mm','Original Necklace','Cross Necklace'],cta:'Esplora i regali per lui ↗'},href:'https://cainte.com/collections/gift-for-him'},
+    her:{en:{title:'For her',text:'A selection that moves from everyday layering to stronger details.',chips:['Ice Necklace','Lace Necklace','Essence Ring'],cta:'Explore gifts for her ↗'},it:{title:'Per lei',text:'Una selezione che va dal layering quotidiano a dettagli più decisi.',chips:['Ice Necklace','Lace Necklace','Essence Ring'],cta:'Esplora i regali per lei ↗'},href:'https://cainte.com/collections/gift-for-her'},
+    first:{en:{title:'The first piece',text:'Start with pieces designed to sit naturally in an everyday rotation.',chips:['Original Necklace','Ice Necklace','Cross Necklace'],cta:'Explore necklaces ↗'},it:{title:'Il primo gioiello',text:'Parti da gioielli pensati per entrare con naturalezza nello stile di ogni giorno.',chips:['Original Necklace','Ice Necklace','Cross Necklace'],cta:'Esplora le collane ↗'},href:'https://cainte.com/collections/necklaces'},
+    budget:{en:{title:'€80 & under',text:'CAINTÈ already curates dedicated gift selections under €80. Choose who the gift is for.',chips:['For him under €80','For her under €80'],cta:'For him under €80 ↗',cta2:'For her under €80 ↗'},it:{title:'€80 e meno',text:'CAINTÈ raccoglie già selezioni regalo dedicate sotto gli €80. Scegli per chi stai cercando.',chips:['Per lui sotto €80','Per lei sotto €80'],cta:'Per lui sotto €80 ↗',cta2:'Per lei sotto €80 ↗'},href:'https://cainte.com/collections/gift-for-him-under-80',href2:'https://cainte.com/collections/gift-for-her-under-80'}
+  };
+  const title=document.getElementById('giftPreviewTitle'), text=document.getElementById('giftPreviewText'), chips=document.getElementById('giftChips'), cta=document.getElementById('giftCta'), cta2=document.getElementById('giftCtaSecondary');
+  let activeGift='him';
+  function renderGift(){
+    const source=giftData[activeGift];
+    const d=source[window.currentLang==='it'?'it':'en'];
+    title.textContent=d.title;
+    text.textContent=d.text;
+    chips.innerHTML=d.chips.map(x=>'<span class="gift-chip">'+x+'</span>').join('');
+    cta.textContent=d.cta;
+    cta.href=source.href;
+    if(source.href2){
+      cta2.hidden=false;
+      cta2.textContent=d.cta2;
+      cta2.href=source.href2;
+    }else{
+      cta2.hidden=true;
+    }
+  }
+  document.querySelectorAll('.gift-filter').forEach(btn=>btn.addEventListener('click',()=>{
+    document.querySelectorAll('.gift-filter').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeGift=btn.dataset.gift;
+    renderGift();
+  }));
+  document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>requestAnimationFrame(renderGift)));
+  renderGift();
+})();
+</script>
+
+
+
+
+
+
+<script>
+(function(){
+  const state = {metal:'silver', top:'arena', middle:'terra', bottom:'essence'};
+  const els = {
+    top: document.getElementById('stackTop'),
+    middle: document.getElementById('stackMiddle'),
+    bottom: document.getElementById('stackBottom')
+  };
+  const labels = {
+    metal: document.getElementById('metalLabel'),
+    top: document.getElementById('slotTopLabel'),
+    middle: document.getElementById('slotMiddleLabel'),
+    bottom: document.getElementById('slotBottomLabel')
+  };
+  const summary = document.getElementById('stackSummary');
+
+  function currentLang(){
+    return window.currentLang === 'it' ? 'it' : 'en';
+  }
+
+  function label(value){
+    const lang = currentLang();
+    const dict = {
+      silver:{en:'Silver', it:'Argento'},
+      gold:{en:'Gold', it:'Oro'},
+      arena:{en:'Arena Ring', it:'Arena Ring'},
+      terra:{en:'Terra Ring', it:'Terra Ring'},
+      essence:{en:'Essence Ring', it:'Essence Ring'},
+      virelle:{en:'Virelle Ring', it:'Virelle Ring'},
+      lava:{en:'Lava Ring', it:'Lava Ring'},
+      none:{en:'None', it:'Nessuno'}
+    };
+    return dict[value] ? dict[value][lang] : value;
+  }
+
+  function metalGradient(metal){
+    if(metal === 'gold'){
+      return {
+        outer1:'#f7e8b8', outer2:'#c79f3d', outer3:'#fff5d3',
+        inner1:'#a9822f', inner2:'#edd18f'
+      };
+    }
+    return {
+      outer1:'#f4f4f4', outer2:'#9e9e9e', outer3:'#ffffff',
+      inner1:'#8a8a8a', inner2:'#e5e5e5'
+    };
+  }
+
+  function ringSVG(type, metal){
+    const g = metalGradient(metal);
+    let content = '';
+    if(type === 'arena'){
+      content = `
+        <defs>
+          <linearGradient id="go" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="${g.outer1}"/>
+            <stop offset="50%" stop-color="${g.outer2}"/>
+            <stop offset="100%" stop-color="${g.outer3}"/>
+          </linearGradient>
+          <linearGradient id="gi" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="${g.inner1}"/>
+            <stop offset="100%" stop-color="${g.inner2}"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="280" cy="120" rx="166" ry="54" fill="none" stroke="url(#go)" stroke-width="20"/>
+        <ellipse cx="280" cy="120" rx="146" ry="43" fill="none" stroke="url(#gi)" stroke-width="4" opacity=".45"/>
+      `;
+    } else if(type === 'terra'){
+      content = `
+        <defs>
+          <linearGradient id="go" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="${g.outer1}"/>
+            <stop offset="50%" stop-color="${g.outer2}"/>
+            <stop offset="100%" stop-color="${g.outer3}"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="280" cy="120" rx="170" ry="55" fill="none" stroke="url(#go)" stroke-width="32"/>
+        <ellipse cx="280" cy="120" rx="142" ry="37" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
+      `;
+    } else if(type === 'essence'){
+      content = `
+        <defs>
+          <linearGradient id="go" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="${g.outer1}"/>
+            <stop offset="50%" stop-color="${g.outer2}"/>
+            <stop offset="100%" stop-color="${g.outer3}"/>
+          </linearGradient>
+          <linearGradient id="plate" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="${g.outer3}"/>
+            <stop offset="55%" stop-color="${g.outer2}"/>
+            <stop offset="100%" stop-color="${g.outer1}"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="280" cy="130" rx="165" ry="48" fill="none" stroke="url(#go)" stroke-width="24"/>
+        <rect x="186" y="26" width="188" height="82" rx="34" fill="url(#plate)"/>
+      `;
+    } else if(type === 'virelle'){
+      content = `
+        <defs>
+          <linearGradient id="go" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="${g.outer1}"/>
+            <stop offset="50%" stop-color="${g.outer2}"/>
+            <stop offset="100%" stop-color="${g.outer3}"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="280" cy="120" rx="168" ry="53" fill="none" stroke="url(#go)" stroke-width="22"/>
+        <ellipse cx="280" cy="120" rx="132" ry="30" fill="none" stroke="rgba(255,255,255,.42)" stroke-width="10"/>
+      `;
+    } else if(type === 'lava'){
+      content = `
+        <defs>
+          <linearGradient id="go" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="${g.outer1}"/>
+            <stop offset="50%" stop-color="${g.outer2}"/>
+            <stop offset="100%" stop-color="${g.outer3}"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="280" cy="124" rx="172" ry="54" fill="none" stroke="url(#go)" stroke-width="28"/>
+        <circle cx="204" cy="88" r="8" fill="rgba(255,255,255,.42)"/>
+        <circle cx="250" cy="78" r="6" fill="rgba(255,255,255,.36)"/>
+        <circle cx="308" cy="76" r="7" fill="rgba(255,255,255,.38)"/>
+        <circle cx="356" cy="88" r="8" fill="rgba(255,255,255,.42)"/>
+      `;
+    }
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240">${content}</svg>`;
+    return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+  }
+
+  function render(){
+    const slots = ['top','middle','bottom'];
+    slots.forEach(slot => {
+      const value = state[slot];
+      labels[slot].textContent = label(value);
+      if(value === 'none'){
+        els[slot].classList.add('hidden');
+        els[slot].removeAttribute('src');
+      } else {
+        els[slot].src = ringSVG(value, state.metal);
+        els[slot].classList.remove('hidden');
+      }
+    });
+    labels.metal.textContent = label(state.metal);
+    const chosen = slots.map(s => state[s]).filter(v => v !== 'none');
+    const items = chosen.map(v => `<span class="stack-chip">${label(v)}</span>`);
+    items.push(`<span class="stack-chip">${label(state.metal)}</span>`);
+    summary.innerHTML = items.join('');
+    document.querySelectorAll('.stack-option').forEach(btn => {
+      const slot = btn.dataset.slot;
+      const active = state[slot] === btn.dataset.ring;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+  }
+
+  document.querySelectorAll('.stack-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state[btn.dataset.slot] = btn.dataset.ring;
+      render();
+    });
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => requestAnimationFrame(render));
+  });
+
+  render();
+})();
+</script>
+
+
+
+
+<script>
+(function(){
+  const pieces={
+    original:{
+      name:'Original Necklace',
+      category:{en:'Necklace',it:'Collana'},
+      image:'https://cainte.com/cdn/shop/files/original-necklace-694966_720x.jpg?v=1731514091',
+      material:'316 Stainless Steel',
+      finish:'Silver',
+      date:'12 MAY 2026',
+      order:'#CA-48291'
+    },
+    cuban:{
+      name:'Cuban Chain 3mm',
+      category:{en:'Necklace',it:'Collana'},
+      image:'https://cainte.com/cdn/shop/files/cuban-chain-3mm-585809_720x.jpg?v=1731513966',
+      material:'316 Stainless Steel',
+      finish:'Silver',
+      date:'02 JUN 2026',
+      order:'#CA-49510'
+    },
+    essence:{
+      name:'Essence Ring',
+      category:{en:'Ring',it:'Anello'},
+      image:'https://cainte.com/cdn/shop/files/essence-ring-663597_720x.jpg?v=1731513976',
+      material:'316 Stainless Steel',
+      finish:'Silver',
+      date:'21 JUL 2026',
+      order:'#CA-51128'
+    }
+  };
+  let selected='original';
+
+  const img=document.getElementById('passportImage');
+  const name=document.getElementById('passportName');
+  const category=document.getElementById('passportCategory');
+  const material=document.getElementById('passportMaterial');
+  const finish=document.getElementById('passportFinish');
+  const date=document.getElementById('passportDate');
+  const order=document.getElementById('passportOrder');
+  const claimPiece=document.getElementById('claimPieceName');
+
+  function renderPiece(){
+    const p=pieces[selected];
+    img.style.opacity='.25';
+    setTimeout(()=>{img.src=p.image;img.style.opacity='1'},120);
+    name.textContent=p.name;
+    category.textContent=p.category[window.currentLang==='it'?'it':'en'];
+    material.textContent=p.material;
+    finish.textContent=p.finish;
+    date.textContent=p.date;
+    order.textContent=p.order;
+    claimPiece.textContent=p.name;
+    document.querySelectorAll('.piece-card').forEach(btn=>btn.classList.toggle('active',btn.dataset.piece===selected));
+  }
+
+  document.querySelectorAll('.piece-card').forEach(btn=>{
+    btn.addEventListener('click',()=>{selected=btn.dataset.piece;renderPiece()});
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>requestAnimationFrame(()=>{renderPiece(); if(typeof renderOrderAction==='function') renderOrderAction();})));
+
+  const overlay=document.getElementById('claimOverlay');
+  const openers=[document.getElementById('openClaim'),document.getElementById('openClaim2'),document.getElementById('supportWarranty')].filter(Boolean);
+  const close=document.getElementById('closeClaim');
+  openers.forEach(btn=>btn.addEventListener('click',()=>{overlay.classList.add('open');overlay.setAttribute('aria-hidden','false')}));
+  close.addEventListener('click',()=>{overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true')});
+  overlay.addEventListener('click',e=>{if(e.target===overlay)close.click()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))close.click()});
+  document.querySelectorAll('.claim-issues button').forEach(btn=>btn.addEventListener('click',()=>{
+    document.querySelectorAll('.claim-issues button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+  }));
+
+  const returnAction=document.getElementById('returnAction');
+  if(returnAction) returnAction.addEventListener('click',()=>{
+    returnAction.textContent=window.currentLang==='it'?'Collega al portale resi CAINTÈ':'Connect to CAINTÈ return portal';
+  });
+
+  const orderAction=document.getElementById('orderAction');
+  let orderRevealed=false;
+  function renderOrderAction(){
+    if(!orderAction) return;
+    if(orderRevealed){
+      orderAction.textContent=pieces[selected].order;
+    }else{
+      orderAction.textContent=window.currentLang==='it'?'Ordine +':'Order +';
+    }
+  }
+  if(orderAction) orderAction.addEventListener('click',()=>{
+    orderRevealed=true;
+    renderOrderAction();
+  });
+
+  // Keep the revealed order synchronized when the selected piece changes.
+  const originalRenderPiece=renderPiece;
+  renderPiece=function(){
+    originalRenderPiece();
+    renderOrderAction();
+  };
+
+  function goToSupportTarget(el){
+    if(!el) return;
+    el.scrollIntoView({behavior:'smooth',block:'center'});
+    el.classList.remove('support-target');
+    requestAnimationFrame(()=>el.classList.add('support-target'));
+    setTimeout(()=>el.classList.remove('support-target'),1200);
+  }
+
+  const supportOrder=document.getElementById('supportOrder');
+  if(supportOrder) supportOrder.addEventListener('click',()=>{
+    orderRevealed=true;
+    renderOrderAction();
+    goToSupportTarget(document.querySelector('.piece-passport'));
+  });
+
+  const supportReturn=document.getElementById('supportReturn');
+  if(supportReturn) supportReturn.addEventListener('click',()=>{
+    goToSupportTarget(document.getElementById('returnCard'));
+  });
+
+  const supportSize=document.getElementById('supportSize');
+  if(supportSize) supportSize.addEventListener('click',()=>{
+    goToSupportTarget(document.getElementById('savedSizesCard'));
+  });
+
+  renderPiece();
+})();
+</script>
+
+
+<script>
+(function(){
+  function openUtility(overlay){
+    if(!overlay) return;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function closeUtility(overlay){
+    if(!overlay) return;
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+
+  const sizesOverlay=document.getElementById('sizesOverlay');
+  const editSizesAction=document.getElementById('editSizesAction');
+  const closeSizes=document.getElementById('closeSizes');
+  const saveSizes=document.getElementById('saveSizes');
+  const ringSizeInput=document.getElementById('ringSizeInput');
+  const braceletSizeInput=document.getElementById('braceletSizeInput');
+  const watchSizeInput=document.getElementById('watchSizeInput');
+  const savedRingSize=document.getElementById('savedRingSize');
+  const savedBraceletSize=document.getElementById('savedBraceletSize');
+  const savedWatchSize=document.getElementById('savedWatchSize');
+  const sizesConfirm=document.getElementById('sizesConfirm');
+
+  if(editSizesAction) editSizesAction.addEventListener('click',()=>{
+    ringSizeInput.value=savedRingSize.textContent.trim();
+    braceletSizeInput.value=savedBraceletSize.textContent.trim();
+    watchSizeInput.value=savedWatchSize.textContent.trim();
+    sizesConfirm.textContent='';
+    openUtility(sizesOverlay);
+  });
+  if(closeSizes) closeSizes.addEventListener('click',()=>closeUtility(sizesOverlay));
+  if(sizesOverlay) sizesOverlay.addEventListener('click',e=>{
+    if(e.target===sizesOverlay) closeUtility(sizesOverlay);
+  });
+  if(saveSizes) saveSizes.addEventListener('click',()=>{
+    savedRingSize.textContent=(ringSizeInput.value||'—').trim();
+    savedBraceletSize.textContent=braceletSizeInput.value||'—';
+    savedWatchSize.textContent=(watchSizeInput.value||'—').trim();
+    sizesConfirm.textContent=window.currentLang==='it'?'Taglie aggiornate.':'Sizes updated.';
+  });
+
+  const contactOverlay=document.getElementById('contactOverlay');
+  const contactAction=document.getElementById('contactCainteAction');
+  const closeContact=document.getElementById('closeContact');
+  const copySupportEmail=document.getElementById('copySupportEmail');
+  const contactConfirm=document.getElementById('contactConfirm');
+
+  if(contactAction) contactAction.addEventListener('click',()=>{
+    contactConfirm.textContent='';
+    openUtility(contactOverlay);
+  });
+  if(closeContact) closeContact.addEventListener('click',()=>closeUtility(contactOverlay));
+  if(contactOverlay) contactOverlay.addEventListener('click',e=>{
+    if(e.target===contactOverlay) closeUtility(contactOverlay);
+  });
+  if(copySupportEmail) copySupportEmail.addEventListener('click',async()=>{
+    try{
+      await navigator.clipboard.writeText('info@cainte.com');
+      contactConfirm.textContent=window.currentLang==='it'?'Email copiata.':'Email copied.';
+    }catch(err){
+      contactConfirm.textContent='info@cainte.com';
+    }
+  });
+
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      closeUtility(sizesOverlay);
+      closeUtility(contactOverlay);
+    }
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  const moments=[...document.querySelectorAll('.moment')];
+  moments.forEach(moment=>{
+    moment.addEventListener('click',()=>{
+      moments.forEach(m=>m.classList.remove('active'));
+      moment.classList.add('active');
+    });
+  });
+})();
+</script>
+
+</body></html>
